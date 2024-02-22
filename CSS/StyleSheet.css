@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #666;
+    background-color: #ffffff;
+    line-height: 1.428;
+
+
+}
+
+
+
+.banner {
+    background-color: white;
+
+}
+
+.navbarimage {
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    height: auto;
+}
+
+.backgroundimage {
+    float: right;
+    background-size: cover;
+
+
+}
+
+h1 {
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 55px;
+}
+
+h2 {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 45px;
+}
+
+hr {
+    background-color: black;
+    height: 1px;
+    color: black;
+}
+
+
+h3 {
+    color: rgb(0, 0, 0);
+    text-align: left;
+    font-size: 25px;
+}
+
+.navbar {
+    background-color: white;
+    margin: px;
+    color: rgb(66, 74, 79);
+    outline-style: outset;
+    top: 0;
+    overflow: hidden;
+    transition: 0.4s;
+    z-index: 99;
+
+}
+
+
+
+.navbar ul {
+    list-style-type: none;
+    background-color: rgba(0, 0, 0, 0.719) hsl(hue, saturation, lightness);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+
+}
+
+
+.navbar a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 25px;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+    margin-right: 158px;
+    outline-style: solid;
+}
+
+.navbar a:hover {
+    background-color: hsl(0, 1%, 38%);
+
+}
+
+.navbar a.active {
+    background-color: hsl(0, 0%, 3%);
+}
+
+.navbar li {
+    float: right;
+    padding: 50px;
+}
+
+
+label {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+}

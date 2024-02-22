@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="StyleSheet" href="./CSS/StyleSheet.css">
+    <title>PMF calculator </title>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Main Laying Calculator</a></li>
+            <li><a href="ServiceLaying.html">Service Laying Calculator</a></li>
+            <li><a href="Repairs.html">Repairs Calculator</a></li>
+            <li><a href="Servicelaying (ND).html">Service Laying (ND) Calculator</a></li>
+
+        </ul>
+    </nav>
+
+    <h1 class="perfromance calculator">
+        Perfromance Calculator
+    </h1>
+
+    <h2 class="Main Laying">
+        Main Laying
+    </h2>
+
+    <h3 class="PercentagePerMeter">
+        Percentage Per Meter (40 hour week)
+    </h3>
+
+    <div id="dynamicontent"></div>
+
+    <!--LESS THAN 75MM INSERTED CACULATION BOX-->
+    <label class="Lessthan75mmINSERTION">`
+        Less than 75mm INSERTION
+    </label>
+    <input id="lessThan75mmInsertUserInput" type="number" placeholder="Enter Meterage">
+    <button onclick="calculateValue('lessThan75mmInsertUserInput', 0.71,'lessThan75mmInsertUserResult')">Submit</button>
+    <p id="lessThan75mmInsertUserResult">
+        <!-- gap for result of meterage-->
+    </p>
+
+    <!--LESS THAN 75MM OPEN CUT CACULATION BOX-->
+    <label class="Lessthan75mmOPENCUT">
+        Less than 75mm OPEN CUT
+    </label>
+    <input id="lessThan75mmOpenCutUserInput" type="number" placeholder="Enter Meterage">
+    <button onclick="calculateValue('lessThan75mmOpenCutUserInput', 0.79, 'lessThan75mmOpenCutResult' )">Submit</button>
+    <p id="lessThan75mmOpenCutResult">
+        <!---gap for result of meterage-->
+    </p>
+
+    <!--LESS THAN 75MM PRE - EX CACULATION BOX-->
+    <label class="Lessthan75mmPRE-EX">
+        Less than 75mm PRE - EX
+    </label>
+    <input id="lessThan75mmPreExUserInput" type="number" placeholder="Enter Meterage">
+    <button onclick="returnPreExLessThan75mm()">Submit</button>
+    <p id="lessThan75mmInsertPreExResult">
+        <!---gap for result of meterage-->
+    </p>
+
+    <hr>
+
+    <!--GREAT THAN 75MM TO 125MM INSERTED CACULATION BOX-->
+    <label class="Greaterthan75mmto125mmINSERTION">
+        Greater than 75mm to 125mm INSERTION
+    </label>
+    <input id="greaterThan75mmTo125mmInsertedInput" type="number" placeholder="Enter Meterage">
+    <button onclick="greaterThan75mmTo125mmInserted()">Submit</button>
+    <p id="greaterThan75mmTo125MMInsertedResult">
+        <!---gap for result of meterage-->
+    </p>
+
+    <!-- GREAT THAN 75MM TO 125MM OPENCUT CACULATION BOX-->
+    <label class="Greaterthan75mmto125mmOPENCUT">
+        Greater than 75mm to 125mm OPEN CUT
+    </label>
+    <input id="greaterThan75mmTo125mmOpenCutInput" type="number" placeholder="Enter Meterage">
+    <button onclick="greaterThan75mmTo125mmOpenCut()">Submit</button>
+    <p id="greaterThan75mmTo125mmOpenCutResult">
+        <!---gap for result of meterage-->
+    </p>
+
+    <!-- GREAT THAN 75MM TO 125MM PRE - EX CACULATION BOX-->
+    <label class="Greaterthan75mmto125mmPRE-EX">
+        Greater than 75mm to 125mm PRE - EX
+    </label>
+    <input id="greaterThan75mmTo125mmPreExInput" type="number" placeholder="Enter Meterage">
+    <button onclick="greaterThan75mmTo125mmPreEx()">Submit</button>
+    <p id="greaterThan75mmTo125mmPreExResult">
+        <!---gap for result of meterage-->
+    </p>
+
+    <hr>
+
+    <!-- 140MM TO 180 INSERT CACULATION BOX-->
+    <label class="onefourtymmto180INSERTION">
+        140mm to 180 INSERTION
+    </label>
+    <input id="140mmto180InsertInput" type="number" placeholder="Enter Meterage">
+    <button onclick="OneFoutymmto180Insert()">Submit</button>
+    <p id="140mmto180InsertResult">
+        <!---gap for result of meterage-->
+    </p>
+
+    <!-- 140MM TO 180 OPENCUT CACULATION BOX-->
+    <label class="oneFourtymmto180OPENCUT">
+        140mm to 180 OPEN CUT
+    </label>
+    <input id="140mmto180OpenCutInput" type="number" placeholder="Enter Meterage">
+    <button onclick="OneFoutymmto180OpenCut()">Submit</button>
+    <p id="140mmto180OpenCutResult">
+        <!---gap for result of meterage-->
+    </p>
+
+
+    <!-- 140MM TO 180 Pre-Ex CACULATION BOX-->
+    <label class="oneFourtymmto180PRE-EX">
+        140mm to 180 PRE-EX
+    </label>
+    <input id="140mmto180PreExInput" type="number" placeholder="Enter Meterage">
+    <button onclick="OneFoutymmto180PreEx()">Submit</button>
+    <p id="140mmto180PreExResult">
+        <!---gap for result of meterage-->
+    </p>
+
+    <hr>
+
+    <!-- 250 Inserted CACULATION BOX-->
+    <label class="twoFiftyINSERTION">
+        250 INSERTION
+    </label>
+    <input id="250InserInput" type="number" placeholder="Enter Meterage">
+    <button onclick="TwoFiftyinsert()">Submit</button>
+    <p id="250InsertResult">
+        <!---gap for result of meterage-->
+    </p>
+
+
+    <!-- 250 Open Cut CACULATION BOX-->
+    <label class="twoFiftyOpenCut">
+        250 OPEN CUT
+    </label>
+    <input id="250OpenCutInput" type="number" placeholder="Enter Meterage">
+    <button onclick="TwoFiftyOpenCut()">Submit</button>
+    <p id="250OpenCutResult">
+        <!---gap for result of meterage-->
+    </p>
+
+    <!-- 250 Pre-Ex CACULATION BOX-->
+    <label class="twoFiftyPRE-EX">
+        250 PRE-EX
+    </label>
+    <input id="250PreExInput" type="number" placeholder="Enter Meterage">
+    <button onclick="TwoFiftyPreEx()">Submit</button>
+    <p id="250PreExResult">
+        <!---gap for result of meterage-->
+    </p>
+
+    <hr>
+
+    <!-- 315 to 255 Insertion CACULATION BOX-->
+    <label>
+        315 to 255 INSERTION
+    </label>
+    <input id="ThreeFifteenToThreeFiveFiveInsertionInput" type="number" placeholder="Enter Meterage">
+    <button onclick="ThreeFifteenToThreeFiveFiveInsert()">Submit</button>
+    <p id="ThreeFifteenToThreeFiveFiveResult">
+        <!---gap for result of meterage-->
+    </p>
+
+    <!-- 315 to 255 OpenCut CACULATION BOX-->
+    <label>
+        315 to 255 OPEN CUT
+    </label>
+    <input id="ThreeFifteenToThreeFiveFiveOpenCutInput" type="number" placeholder="Enter Meterage">
+    <button onclick="ThreeFifteenToThreeFiveFiveOpenCut()">Submit</button>
+    <p id="ThreeFifteenToThreeFiveFiveOpenCutResult">
+        <!---gap for result of meterage-->
+    </p>
+
+
+    <!-- 315 to 255 PreEx CACULATION BOX-->
+    <label>
+        315 to 255 PRE-EX
+    </label>
+    <input id="ThreeFifteenToThreeFiveFivePreExInput" type="number" placeholder="Enter Meterage">
+    <button onclick="ThreeFifteenToThreeFiveFivePreEx()">Submit</button>
+    <p id="ThreeFifteenToThreeFiveFivePreExResult">
+        <!---gap for result of meterage-->
+    </p>
+
+    <hr>
+
+    <!-- 500 Insert CACULATION BOX-->
+    <label>
+        500 INSERTION
+    </label>
+    <input id="fiveHundredInsertedInput" type="number" placeholder="Enter Meterage">
+    <button onclick="fiveHundredInserted()">Submit</button>
+    <p id="fiveHundredInsertedResult">
+        <!---gap for result of meterage-->
+    </p>
+
+    <!-- 500 Open Cut CACULATION BOX-->
+    <label>
+        500 OPEN CUT
+    </label>
+    <input id="fiveHundredOpenCutInput" type="number" placeholder="Enter Meterage">
+    <button onclick="fiveHundredOpenCut()">Submit</button>
+    <p id="fiveHundredOpenCutResult">
+        <!---gap for result of meterage-->
+    </p>
+
+    <!-- 500 PreEx CACULATION BOX-->
+    <label>
+        500 PRE-EX
+    </label>
+    <input id="fiveHundredPreExInput" type="number" placeholder="Enter Meterage">
+    <button onclick="fiveHundredPreEx()">Submit</button>
+    <p id="fiveHundredPreExResult">
+        <!---gap for result of meterage-->
+    </p>
+
+    <hr>
+
+    <!-- 630 insert CACULATION BOX-->
+    <label>
+        630 INSERTION
+    </label>
+    <input id="sixThirtyHundredInsertionInput" type="number" placeholder="Enter Meterage">
+    <button onclick="sixThirtyHundredInsertion()">Submit</button>
+    <p id="sixThirtyHundredInsertionResult">
+        <!---gap for result of meterage-->
+    </p>
+
+    <!-- 630 Open Cut CACULATION BOX-->
+    <label>
+        630 OPEN CUT
+    </label>
+    <input id="sixThirtyHundredOpenCutInput" type="number" placeholder="Enter Meterage">
+    <button onclick="sixThirtyHundredOpenCut()">Submit</button>
+    <p id="sixThirtyHundredOpenCutResult">
+        <!---gap for result of meterage-->
+    </p>
+
+
+    <!-- 630 Pre-Ex CACULATION BOX-->
+    <label>
+        630 PRE-EX
+    </label>
+    <input id="sixThirtyHundredPreExInput" type="number" placeholder="Enter Meterage">
+    <button onclick="sixThirtyHundredPreEx()">Submit</button>
+    <p id="sixThirtyHundredPreExResult">
+        <!---gap for result of meterage-->
+    </p>
+
+    <hr>
+
+    <!-- Greater Than630 Insertion CACULATION BOX-->
+    <label>
+        Greater Than 630 INSERTION
+    </label>
+    <input id="greaterThansixThirtyHundredInsertionInput" type="number" placeholder="Enter Meterage">
+    <button onclick="greaterThansixThirtyHundredInsertion()">Submit</button>
+    <p id="greaterThansixThirtyHundredInsertionResult">
+        <!---gap for result of meterage-->
+    </p>
+
+
+    <!-- Greater Than630 OpenCut CACULATION BOX-->
+    <label>
+        Greater Than 630 OPEN CUT
+    </label>
+    <input id="greaterThansixThirtyHundredOpenCutInput" type="number" placeholder="Enter Meterage">
+    <button onclick="greaterThansixThirtyHundredOpenCut()">Submit</button>
+    <p id="greaterThansixThirtyHundredOpenCutResult">
+        <!---gap for result of meterage-->
+    </p>
+
+    <!-- Greater Than630 Pre-Ex CACULATION BOX-->
+    <label>
+        Greater Than 630 PRE-EX
+    </label>
+    <input id="greaterThansixThirtyHundredPreExInput" type="number" placeholder="Enter Meterage">
+    <button onclick="greaterThansixThirtyHundredPreEx()">Submit</button>
+    <p id="greaterThansixThirtyHundredPreExResult">
+        <!---gap for result of meterage-->
+    </p>
+
+    <hr>
+
+    <!-- Abandon CACULATION BOX-->
+    <label>
+        PER PON (40 hour week) ABANDON
+    </label>
+    <input id="AbandonInput" type="number" placeholder="Enter Meterage" />
+    <button onclick="Abandon()">Submit</button>
+    <p id="AbandonResult">
+        <!---gap for result of meterage-->
+    </p>
+
+    <hr>
+
+    <label>TOTAL</label>
+    <input id="totalbox" type="text" value="0" disabled />
+    <button onclick="clear">Clear</button>
+
+    <script src="./java/script.js"></script>
+</body>
+
+</html>
