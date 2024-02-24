@@ -19,7 +19,7 @@ function calculateValue(inputElementId, multiplyer, outputElementId) {
     updateHistory(inputElementId, result);
 }
 
-const entry = {
+/*const entry = {
     input: "someInputId",
     multipler: 0.12,
     output: "somePId"
@@ -59,7 +59,7 @@ console.log(html);
 
 
 document.getElementById("dynamicontent").innertHtml = html;
-
+*/
 
 //FUNCTION FOR <75 INSERTED CACULATION
 // function returnInsertLessThan75mm() {

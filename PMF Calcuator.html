@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="StyleSheet" href="CSS\DropDownMenu.css">
+    <title>PMF calculator </title>
+
+<body>
+    <h1 class="perfromance calculator">
+        Perfromance Calculator
+    </h1>
+    <nav class="navbar">
+        <ul>
+            <li>
+                <div class="dropdown1">
+                    <div>
+                        <label class="button">Main Laying</label>
+                        <div class="mainlaying">
+                            <a>Less or equal to 75mm</a>
+                            <a>more than 75 to 125mm</a>
+                            <a>140 to 180mm</a>
+                            <a>315 to 355mm</a>
+                            <a>500</a>
+                            <a>630</a>
+                            <a>Greater than 630</a>
+                            <a>Abandon</a>
+
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <!-- creat a Main laying drop down-->
+                <div class="dropdown1">
+                    <label class="button">Repairs</label>
+                    <div class="repairs">
+                        <a>ERM2 (2" & Below)</a>
+                        <a>ERM5 (5" > 3")</a>
+                        <a>EMR7 (7" > 6")</a>
+                        <a>EMR10 (10" > 8")</a>
+                        <a>EMR16 (16" > 12")</a>
+                        <a>ERM22 (22" > 18")</a>
+                        <a>ERM28 (28" > 24")</a>
+                        <a>ERM30 (30" & above)</a>
+                        <a>ERMD (Damaged Main)</a>
+                        <a>Service Repair</a>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <!-- creat a Main laying drop down-->
+                <div class="dropdown1">
+                    <label class="button">Service Laying</label>
+                    <div class="servicelaying">
+                        <a>New to Existing</a>
+                        <a>New to New House</a>
+                        <a>Alteration</a>
+                        <a>Relay (Escape)</a>
+                        <a>Relay on Scheme</a>
+                        <a>Relay MOBS</a>
+                        <a>Transer</a>
+                        <a>Mini Transfer (rigs)</a>
+                    </div>
+                </div>
+            </li>
+
+
+            <li>
+                <!-- creat a Main laying drop down-->
+                <div class="dropdown1">
+                    <label class="button">Service Laying(ND)</label>
+                    <div class="servicelayingND">
+                        <a>New Service</a>
+                        <a>Alteration</a>
+                        <a>Relay (Escape)</a>
+                        <a>Relay</a>
+                        <a>Transer</a>
+                    </div>
+
+                </div>
+            </li>
+
+
+            <li>
+                <!-- creat a Main laying drop down-->
+                <div class="dropdown1">
+                    <label class="button">OtherWork</label>
+                    <div class="otherwork">
+                        <a>Other Leakage (NKD ect)</a>
+                        <a>Sercive Cut off</a>
+                        <a>Service Cut off - large Dia</a>
+                        <a>DR4</a>
+                        <a>DR4S</a>
+                        <a>MO</a>
+                        <a>SO</a>
+                        <a>Surv</a>
+                        <a>Mains Gov Base</a>
+                        <a>Mains Gov fit</a>
+                        <a>Mains Gov Remove</a>
+                        <a>Service Gov Base</a>
+                        <a>Service Gov Fit</a>
+                        <a>Service GOV Remove</a>
+                    </div>
+                </div>
+            </li>
+
+
+
+
+
+
+        </ul>
+
+    </nav>
+
+
+
+    <script src="./java/script.js"></script>
+</body>
+<!-- keep this fixed on bottom-->
+<footer>
+    <label>TOTAL</label>
+    <input id="totalbox" type="text" value="0" disabled />
+    <button onclick="clear">Clear</button>
+</footer>

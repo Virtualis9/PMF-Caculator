@@ -1,0 +1,138 @@
+h1 {
+    text-align: center;
+    color: black;
+}
+
+.navbar .dropdown1 {
+    display: inline-block;
+    margin-left: 50px;
+    padding: 50px;
+
+}
+
+.button {
+    display: inline-block;
+    background-color: hsl(0, 0%, 80%);
+    color: black;
+    border-radius: 0px;
+    border: 10px;
+    line-height: 40px;
+    cursor: pointer;
+    padding: 8px 25px;
+
+}
+
+li {
+    display: inline;
+
+}
+
+ul {
+    list-style-type: none;
+
+}
+
+.dropdown1 button {
+    background-color: hsl(0, 0%, 80%);
+    color: rgb(5, 5, 5);
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+
+
+}
+
+.dropdown1 a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+
+}
+
+.dropdown1 a:hover {
+    color: rgba(0, 0, 0, 0.281);
+}
+
+.dropdown1 .mainlaying {
+    display: none;
+    background-color: hsl(0, 0%, 95%);
+    position: absolute;
+    min-width: 100px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.733);
+}
+
+.dropdown1:hover .mainlaying {
+    display: block;
+}
+
+.dropdown1 .repairs {
+    display: none;
+    background-color: hsl(0, 0%, 95%);
+    position: absolute;
+    min-width: 100px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.733);
+}
+
+.dropdown1:hover .repairs {
+    display: block;
+}
+
+.dropdown1 .servicelaying {
+    display: none;
+    background-color: hsl(0, 0%, 95%);
+    position: absolute;
+    min-width: 100px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.733);
+}
+
+.dropdown1:hover .servicelaying {
+    display: block;
+}
+
+.dropdown1 .servicelayingND {
+    display: none;
+    background-color: hsl(0, 0%, 95%);
+    position: absolute;
+    min-width: 100px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.733);
+}
+
+.dropdown1:hover .servicelayingND {
+    display: block;
+}
+
+.dropdown1 .otherwork {
+    display: none;
+    background-color: hsl(0, 0%, 95%);
+    position: absolute;
+    min-width: 100px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.733);
+}
+
+.dropdown1:hover .otherwork {
+    display: block;
+}
+
+.dropdown1:hover button {
+    background-color: hsl(0, 0, 70%);
+
+}
+
+.dropdown1 a:hover {
+    background-color: hsl(0, 0, 90%);
+    ;
+
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+footer {
+    margin-top: auto;
+    position: relative;
+}
