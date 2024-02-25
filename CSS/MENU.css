@@ -1,0 +1,159 @@
+.dropdown button {
+    background-color: hsl(0, 0%, 70%);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+li {
+    display: inline-block;
+    color: black;
+    padding: 10px 15px;
+
+}
+
+.dropdown1 button {
+    background-color: hsl(0, 0, 80%);
+    color: black;
+    padding: 10px 15px;
+
+
+}
+
+.content button {
+    color: black;
+    padding: 0 0px;
+    padding: 10px 15px;
+
+}
+
+.dropdown1 {
+    background-color: hsl(0, 0%, 95%);
+    min-width: 100px;
+    box-shadow: 2px 2px 5px black;
+    display: none;
+    /* Initially hide the dropdown */
+}
+
+.dropdown:hover .dropdown1 {
+    display: block;
+    /* Show the dropdown when the button is clicked (focused) */
+}
+
+.content1 {
+    background-color: hsl(0, 0%, 95%);
+    position: absolute;
+    min-width: 100px;
+    box-shadow: 2px 2px 5px black;
+    display: none;
+    /* Initially hide the dropdown */
+}
+
+.dropdown1:hover .content1 {
+    display: block;
+}
+
+.content2 {
+    background-color: hsl(0, 0%, 95%);
+    position: absolute;
+    min-width: 100px;
+    box-shadow: 2px 2px 5px black;
+    display: none;
+    /* Initially hide the dropdown */
+}
+
+.dropdown1:hover .content2 {
+    display: block;
+}
+
+.content3 {
+    background-color: hsl(0, 0%, 95%);
+    position: absolute;
+    min-width: 100px;
+    box-shadow: 2px 2px 5px black;
+    display: none;
+    /* Initially hide the dropdown */
+}
+
+.dropdown1:hover .content3 {
+    display: block;
+}
+
+.content4 {
+    background-color: hsl(0, 0%, 95%);
+    position: absolute;
+    min-width: 100px;
+    box-shadow: 2px 2px 5px black;
+    display: none;
+    /* Initially hide the dropdown */
+}
+
+.dropdown1:hover .content4 {
+    display: block;
+}
+
+.content5 {
+    background-color: hsl(0, 0%, 95%);
+    position: absolute;
+    min-width: 100px;
+    box-shadow: 2px 2px 5px black;
+    display: none;
+    /* Initially hide the dropdown */
+}
+
+.dropdown1:hover .content5 {
+    display: block;
+}
+
+.content6 {
+    background-color: hsl(0, 0%, 95%);
+    position: absolute;
+    min-width: 100px;
+    box-shadow: 2px 2px 5px black;
+    display: none;
+    /* Initially hide the dropdown */
+}
+
+.dropdown1:hover .content6 {
+    display: block;
+}
+
+.content7 {
+    background-color: hsl(0, 0%, 95%);
+    position: absolute;
+    min-width: 100px;
+    box-shadow: 2px 2px 5px black;
+    display: none;
+    /* Initially hide the dropdown */
+}
+
+.dropdown1:hover .content7 {
+    display: block;
+}
+
+.content8 {
+    background-color: hsl(0, 0%, 95%);
+    position: absolute;
+    min-width: 100px;
+    box-shadow: 2px 2px 5px black;
+    display: none;
+    /* Initially hide the dropdown */
+}
+
+.dropdown1:hover .content8 {
+    display: block;
+}
+
+.content9 {
+    background-color: hsl(0, 0%, 95%);
+    position: absolute;
+    min-width: 100px;
+    box-shadow: 2px 2px 5px black;
+    display: none;
+    /* Initially hide the dropdown */
+}
+
+.dropdown1:hover .content9 {
+    display: block;
+}
