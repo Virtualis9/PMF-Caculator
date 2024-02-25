@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="StyleSheet" href="CSS\DropDownMenu.css">
+    <title>PMF calculator Less Than 75mm </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" href="CSS\DropDownMenu.css">
+</head>
+
+<body>
+    <a class="mainmenu" href="PMF MainPage.html">Main menu</a>
+    <nav class="navbar">
+
+        <ul>
+            <li>
+                <div class="dropdown1">
+                    <div>
+                        <label class="button">Main Laying</label>
+                        <div class="mainlaying">
+                            <a href="LessThan75mm.html">Less or equal to 75mm</a>
+                            <a href="Morethan75to125mm.html">Greater than 75 to 125mm</a>
+                            <a href="140to180mm.html">140 to 180mm</a>
+                            <a href="250mm.html">250</a>
+                            <a>315 to 355mm</a>
+                            <a>500</a>
+                            <a>630</a>
+                            <a>Greater than 630</a>
+                            <a>Abandon</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <!-- creat a Main laying drop down-->
+                <div class="dropdown1">
+                    <label class="button">Repairs</label>
+                    <div class="repairs">
+                        <a>ERM2 (2" & Below)</a>
+                        <a>ERM5 (5" > 3")</a>
+                        <a>EMR7 (7" > 6")</a>
+                        <a>EMR10 (10" > 8")</a>
+                        <a>EMR16 (16" > 12")</a>
+                        <a>ERM22 (22" > 18")</a>
+                        <a>ERM28 (28" > 24")</a>
+                        <a>ERM30 (30" & above)</a>
+                        <a>ERMD (Damaged Main)</a>
+                        <a>Service Repair</a>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <!-- creat a Main laying drop down-->
+                <div class="dropdown1">
+                    <label class="button">Service Laying</label>
+                    <div class="servicelaying">
+                        <a>New to Existing</a>
+                        <a>New to New House</a>
+                        <a>Alteration</a>
+                        <a>Relay (Escape)</a>
+                        <a>Relay on Scheme</a>
+                        <a>Relay MOBS</a>
+                        <a>Transer</a>
+                        <a>Mini Transfer (rigs)</a>
+                    </div>
+                </div>
+            </li>
+
+
+            <li>
+                <!-- creat a Main laying drop down-->
+                <div class="dropdown1">
+                    <label class="button">Service Laying(ND)</label>
+                    <div class="servicelayingND">
+                        <a>New Service</a>
+                        <a>Alteration</a>
+                        <a>Relay (Escape)</a>
+                        <a>Relay</a>
+                        <a>Transer</a>
+                    </div>
+
+                </div>
+            </li>
+
+
+            <li>
+                <!-- creat a Main laying drop down-->
+                <div class="dropdown1">
+                    <label class="button">OtherWork</label>
+                    <div class="otherwork">
+                        <a>Other Leakage (NKD ect)</a>
+                        <a>Sercive Cut off</a>
+                        <a>Service Cut off - large Dia</a>
+                        <a>DR4</a>
+                        <a>DR4S</a>
+                        <a>MO</a>
+                        <a>SO</a>
+                        <a>Surv</a>
+                        <a>Mains Gov Base</a>
+                        <a>Mains Gov fit</a>
+                        <a>Mains Gov Remove</a>
+                        <a>Service Gov Base</a>
+                        <a>Service Gov Fit</a>
+                        <a>Service GOV Remove</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div>
+        <h1>Performance Calculator</h1>
+    </div>
+    <div>
+        <h3 class="PercentagePerMeter">
+            Percentage Per Meter (40 hour week)
+        </h3>
+
+    </div>
+    <div class="meteragebox">
+        <!--LESS THAN 75MM INSERTED CACULATION BOX-->
+        <label class="Lessthan75mmINSERTION">
+            Less than 75mm INSERTION
+        </label>
+        <input id="lessThan75mmInsertUserInput" type="number" placeholder="Enter Meterage">
+        <button
+            onclick="calculateValue('lessThan75mmInsertUserInput', 0.71,'lessThan75mmInsertUserResult')">Submit</button>
+        <p id="lessThan75mmInsertUserResult">
+            <!-- gap for result of meterage-->
+        </p>
+
+        <!--LESS THAN 75MM OPEN CUT CACULATION BOX-->
+        <label class="Lessthan75mmOPENCUT">
+            Less than 75mm OPEN CUT
+        </label>
+        <input id="lessThan75mmOpenCutUserInput" type="number" placeholder="Enter Meterage">
+        <button
+            onclick="calculateValue('lessThan75mmOpenCutUserInput', 0.79, 'lessThan75mmOpenCutResult' )">Submit</button>
+        <p id="lessThan75mmOpenCutResult">
+            <!---gap for result of meterage-->
+        </p>
+
+        <!--LESS THAN 75MM PRE - EX CACULATION BOX-->
+        <label class="Lessthan75mmPRE-EX">
+            Less than 75mm PRE - EX
+        </label>
+        <input id="lessThan75mmPreExUserInput" type="number" placeholder="Enter Meterage">
+        <button onclick="returnPreExLessThan75mm()">Submit</button>
+        <p id="lessThan75mmInsertPreExResult">
+            <!---gap for result of meterage-->
+        </p>
+    </div>
+
+
+
+    <script src="./java/script.js"></script>
+</body>
+
+</html>

@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="StyleSheet" href="CSS\DropDownMenu.css">
     <title>PMF calculator </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet" href="CSS\DropDownMenu.css">
+</head>
 
 <body>
-    <h1 class="perfromance calculator">
-        Perfromance Calculator
-    </h1>
+    <a class="mainmenu" href="PMF MainPage.html">Main Menu</a>
     <nav class="navbar">
         <ul>
             <li>
@@ -18,15 +22,15 @@
                     <div>
                         <label class="button">Main Laying</label>
                         <div class="mainlaying">
-                            <a>Less or equal to 75mm</a>
-                            <a>more than 75 to 125mm</a>
-                            <a>140 to 180mm</a>
+                            <a href="LessThan75mm.html">Less or equal to 75mm</a>
+                            <a href="Morethan75to125mm.html">Greater than 75 to 125mm</a>
+                            <a href="140to180mm.html">140 to 180mm</a>
+                            <a href="250mm.html">250</a>
                             <a>315 to 355mm</a>
                             <a>500</a>
                             <a>630</a>
                             <a>Greater than 630</a>
                             <a>Abandon</a>
-
                         </div>
                     </div>
                 </div>
@@ -106,23 +110,55 @@
                     </div>
                 </div>
             </li>
-
-
-
-
-
-
         </ul>
-
     </nav>
+
+    <div>
+        <h1>Performance Calculator</h1>
+    </div>
+    <div>
+        <h3 class="PercentagePerMeter">
+            Percentage Per Meter (40 hour week)
+        </h3>
+
+    </div>
+    <div class="meteragebox">
+        <p>
+            <!--GREAT THAN 75MM TO 125MM INSERTED CACULATION BOX-->
+            <label class="Greaterthan75mmto125mmINSERTION">
+                Greater than 75mm to 125mm INSERTION
+            </label>
+            <input id="greaterThan75mmTo125mmInsertedInput" type="number" placeholder="Enter Meterage">
+            <button onclick="greaterThan75mmTo125mmInserted()">Submit</button>
+        <p id="greaterThan75mmTo125MMInsertedResult">
+            <!---gap for result of meterage-->
+        </p>
+
+        <!-- GREAT THAN 75MM TO 125MM OPENCUT CACULATION BOX-->
+        <label class="Greaterthan75mmto125mmOPENCUT">
+            Greater than 75mm to 125mm OPEN CUT
+        </label>
+        <input id="greaterThan75mmTo125mmOpenCutInput" type="number" placeholder="Enter Meterage">
+        <button onclick="greaterThan75mmTo125mmOpenCut()">Submit</button>
+        <p id="greaterThan75mmTo125mmOpenCutResult">
+            <!---gap for result of meterage-->
+        </p>
+
+        <!-- GREAT THAN 75MM TO 125MM PRE - EX CACULATION BOX-->
+        <label class="Greaterthan75mmto125mmPRE-EX">
+            Greater than 75mm to 125mm PRE - EX
+        </label>
+        <input id="greaterThan75mmTo125mmPreExInput" type="number" placeholder="Enter Meterage">
+        <button onclick="greaterThan75mmTo125mmPreEx()">Submit</button>
+        <p id="greaterThan75mmTo125mmPreExResult">
+            <!---gap for result of meterage-->
+        </p>
+        </p>
+    </div>
 
 
 
     <script src="./java/script.js"></script>
 </body>
-<!-- keep this fixed on bottom-->
-<footer>
-    <label>TOTAL</label>
-    <input id="totalbox" type="text" value="0" disabled />
-    <button onclick="clear">Clear</button>
-</footer>
+
+</html>

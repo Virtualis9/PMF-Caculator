@@ -7,3 +7,10 @@
 
     </ul>
     <nav>
+
+
+        <footer>
+            <label class="total">TOTAL</label>
+            <input id="totalbox" type="text" value="0" disabled />
+            <button onclick="clear">Clear</button>
+        </footer>
