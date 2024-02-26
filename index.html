@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS\navbarstylesheet.css.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav>
+        <div class="dropdown-container">
+            <button class="dropdown-btn" onclick="toggleDropdown('mainSubMenu')">Main Laying</button>
+            <div class="submenu" id="mainSubMenu">
+                <ul class="dropdown-content">
+                    <li>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu1')">Less than 75mm</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu2')">More Than 75mm to 125mm</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu3')">140mm to 180mm</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu4')">250mm</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu5')">315mm to 255mm</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu6')">500mm</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu7')">630mm</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu8')">More than 630mm</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu9')">Per PON (40 Hour week)
+                            Abandon</button>
+                        <!-- Add buttons here and change number to suit. this will add more submenus-->
+                    </li>
+                </ul>
+                <!-- Submenus for each button make sure you change numbers to suit Change Div ID to related number -->
+                <div class="submenu" id="submenu1">
+                    <ul class="dropdown-content">
+                        <!--Button 1 -->
+                        <li>
+                            <label for="input1">Inserted</label>
+                            <input type="text" id="input1" placeholder="Less than 75mm">
+                            <button
+                                onclick="calculateValue('lessThan75mmInsertUserInput', 0.71,'lessThan75mmInsertUserResult')">Submit</button>
+                            <button>Clear</button>
+                        </li>
+                        <li>
+                            <label for="input1">Open Cut</label>
+                            <input type="text" id="input1" placeholder="Less than 75mm">
+                            <button>Submit</button>
+                            <button>Clear</button>
+                        </li>
+                        <li>
+                            <label for="input1">Pre - EX</label>
+                            <input type="text" id="input1" placeholder="Less than 75mm">
+                            <button>Submit</button>
+                            <button>Clear</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="submenu" id="submenu2">
+                    <ul class="dropdown-content">
+                        <!-- Button 2 -->
+                        <li>
+                            <label for="input1">Inserted</label>
+                            <input type="text" id="input1" placeholder="More Than 75mm to 125mm">
+                            <button>Submit</button>
+                            <button>Clear</button>
+                        </li>
+                        <li>
+                            <label for="input1">Open Cut</label>
+                            <input type="text" id="input1" placeholder="More Than 75mm to 125mm">
+                            <button>Submit</button>
+                            <button>Clear</button>
+                        </li>
+                        <li>
+                            <label for="input1">Pre - EX</label>
+                            <input type="text" id="input1" placeholder="More Than 75mm to 125mm">
+                            <button>Submit</button>
+                            <button>Clear</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="submenu" id="submenu3">
+                    <ul class="dropdown-content">
+                        <!-- Button 3 -->
+                        <li>
+                            <label for="input1">Inserted</label>
+                            <input type="text" id="input1" placeholder="140mm to 180mm">
+                            <button>Submit</button>
+                            <button>Clear</button>
+                        </li>
+                        <li>
+                            <label for="input1">Open Cut</label>
+                            <input type="text" id="input1" placeholder="140mm to 180mm">
+                            <button>Submit</button>
+                            <button>Clear</button>
+                        </li>
+                        <li>
+                            <label for="input1">Pre - EX</label>
+                            <input type="text" id="input1" placeholder="140mm to 180mm">
+                            <button>Submit</button>
+                            <button>Clear</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="submenu" id="submenu4">
+                    <ul class="dropdown-content">
+                        <!-- Button 4 -->
+                        <li>
+                            <label for="input1">Inserted</label>
+                            <input type="text" id="input1" placeholder="250mm">
+                            <button>Submit</button>
+                            <button>Clear</button>
+                        </li>
+                        <li>
+                            <label for="input1">Open Cut</label>
+                            <input type="text" id="input1" placeholder="250mm">
+                            <button>Submit</button>
+                            <button>Clear</button>
+                        </li>
+                        <li>
+                            <label for="input1">Pre - EX</label>
+                            <input type="text" id="input1" placeholder="250mm">
+                            <button>Submit</button>
+                            <button>Clear</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="submenu" id="submenu5">
+                    <ul class="dropdown-content">
+                        <!-- Button 5 -->
+                        <li>
+                            <label for="input1">Inserted</label>
+                            <input type="text" id="input1" placeholder="315mm to 255mm">
+                            <button>Submit</button>
+                            <button>Clear</button>
+                        </li>
+                        <li>
+                            <label for="input1">Open Cut</label>
+                            <input type="text" id="input1" placeholder="315mm to 255mm">
+                            <button>Submit</button>
+                            <button>Clear</button>
+                        </li>
+                        <li>
+                            <label for="input1">Pre - EX</label>
+                            <input type="text" id="input1" placeholder="315mm to 255mm">
+                            <button>Submit</button>
+                            <button>Clear</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="submenu" id="submenu6">
+                    <ul class="dropdown-content">
+                        <!-- Button 6 -->
+                        <li>
+                            <label for="input1">Inserted</label>
+                            <input type="text" id="input1" placeholder="500mm">
+                            <button>Submit</button>
+                            <button>Clear</button>
+                        </li>
+                        <li>
+                            <label for="input1">Open Cut</label>
+                            <input type="text" id="input1" placeholder="500mm">
+                            <button>Submit</button>
+                            <button>Clear</button>
+                        </li>
+                        <li>
+                            <label for="input1">Pre - EX</label>
+                            <input type="text" id="input1" placeholder="500mm">
+                            <button>Submit</button>
+                            <button>Clear</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="submenu" id="submenu7">
+                    <ul class="dropdown-content">
+                        <!-- Button 7 -->
+                        <li>
+                            <label for="input1">Inserted</label>
+                            <input type="text" id="input1" placeholder="630mm">
+                            <button>Submit</button>
+                            <button>Clear</button>
+                        </li>
+                        <li>
+                            <label for="input1">Open Cut</label>
+                            <input type="text" id="input1" placeholder="630mm">
+                            <button>Submit</button>
+                            <button>Clear</button>
+                        </li>
+                        <li>
+                            <label for="input1">Pre - EX</label>
+                            <input type="text" id="input1" placeholder="630mm">
+                            <button>Submit</button>
+                            <button>Clear</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="submenu" id="submenu8">
+                    <ul class="dropdown-content">
+                        <!-- Button 8 -->
+                        <li>
+                            <label for="input1">Inserted</label>
+                            <input type="text" id="input1" placeholder="More than 630mm">
+                            <button>Submit</button>
+                            <button>Clear</button>
+                        </li>
+                        <li>
+                            <label for="input1">Open Cut</label>
+                            <input type="text" id="input1" placeholder="More than 630mm">
+                            <button>Submit</button>
+                            <button>Clear</button>
+                        </li>
+                        <li>
+                            <label for="input1">Pre - EX</label>
+                            <input type="text" id="input1" placeholder="More than 630mm">
+                            <button>Submit</button>
+                            <button>Clear</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="submenu" id="submenu9">
+                    <ul class="dropdown-content">
+                        <!-- Button 9 -->
+                        <li>
+                            <label for="input1">PER PON (40 hour week) ABANDON</label>
+                            <input type="text" id="input1" placeholder="Per PON">
+                            <button>Submit</button>
+                            <button>Clear</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <script src="JavaScript\script.js"></script>
+</body>
+
+</html>

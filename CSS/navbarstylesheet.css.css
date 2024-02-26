@@ -1,0 +1,103 @@
+.submenu {
+    display: none; /* Hide all submenus by default */
+}
+
+#submenu1,
+#submenu2,
+#submenu3,
+#submenu4,
+#submenu5,
+#submenu6,
+#submenu7,
+#submenu8,
+#submenu9 {
+    border: 2px solid #555;
+    border-radius: 10px;
+    margin: 10px 0;
+    width: 250px;
+    padding: 10px;
+}
+
+.dropdown-content li {
+    list-style: none;
+}
+
+.dropdown-btn {
+    background-color: #555;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.dropdown-btn:hover {
+    background-color: #777;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.sub-btn {
+    background-color: #555;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.sub-btn:hover {
+    background-color: #777;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+/* Style for each submenu content box */
+#submenu1,
+#submenu2,
+#submenu3,
+#submenu4,
+#submenu5,
+#submenu6,
+#submenu7,
+#submenu8,
+#submenu9 {
+    border: 2px solid #555;
+    border-radius: 10px;
+    margin: 10px 0;
+    width: 250px;
+    padding: 10px;
+}
+
+/* Style for submit and clear buttons within each submenu */
+.submenu button {
+    background-color: #555;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-right: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.submenu button:hover {
+    background-color: #777;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for input feilds */
+.submenu input {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px 0;
+    padding: 10px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    position: relative;
+
+}

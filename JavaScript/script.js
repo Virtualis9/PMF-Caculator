@@ -19,6 +19,24 @@ function calculateValue(inputElementId, multiplyer, outputElementId) {
     updateHistory(inputElementId, result);
 }
 
+
+
+
+
+
+function toggleDropdown(mainSubMenuId) {
+    var mainSubMenu = document.getElementById(mainSubMenuId);
+    mainSubMenu.style.display = (mainSubMenu.style.display === "block") ? "none" : "block";
+}
+
+function toggleSubmenu(submenuId) {
+    var submenu = document.getElementById(submenuId);
+    submenu.style.display = (submenu.style.display === "block") ? "none" : "block";
+}
+
+
+
+
 /*const entry = {
     input: "someInputId",
     multipler: 0.12,
