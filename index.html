@@ -12,6 +12,23 @@
     <nav>
         <div class="dropdown-container">
             <button class="dropdown-btn" onclick="toggleDropdown('mainSubMenu')">Main Laying</button>
+            <button class="dropdown-btn" onclick="toggleDropdown('repairsSubMenu')">Repairs</button>
+            <div class="submenu" id="repairsSubMenu">
+                <ul class="dropdown-content">
+                    <li>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu1')">ERM2 (2" & below)</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu1')">ERM5 (5" > 3")</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu1')">ERM7 (7" > 6")</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu1')">ERM10 (10" > 8")</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu1')">ERM16 (16" > 12")</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu1')">ERM22 (22" > 18")</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu1')">ERM28 (28" > 24")</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu1')">ERM30 (30" & above)</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu1')">ERMD (Damaged Main)</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu1')">Service Repair</button>
+                    </li>
+                </ul>
+            </div>
             <div class="submenu" id="mainSubMenu">
                 <ul class="dropdown-content">
                     <li>
@@ -23,8 +40,8 @@
                         <button class="sub-btn" onclick="toggleSubmenu('submenu6')">500mm</button>
                         <button class="sub-btn" onclick="toggleSubmenu('submenu7')">630mm</button>
                         <button class="sub-btn" onclick="toggleSubmenu('submenu8')">More than 630mm</button>
-                        <button class="sub-btn" onclick="toggleSubmenu('submenu9')">Per PON (40 Hour week)
-                            Abandon</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu9')">Per PON (40 Hour
+                            week)Abandon</button>
                         <!-- Add buttons here and change number to suit. this will add more submenus-->
                     </li>
                 </ul>
@@ -34,22 +51,39 @@
                         <!--Button 1 -->
                         <li>
                             <label for="input1">Inserted</label>
-                            <input type="text" id="input1" placeholder="Less than 75mm">
+                            <input type="text" id="lessThan75mmInsertUserInput" id="input1"
+                                placeholder="Less than 75mm">
                             <button
                                 onclick="calculateValue('lessThan75mmInsertUserInput', 0.71,'lessThan75mmInsertUserResult')">Submit</button>
                             <button>Clear</button>
+                            <p id="lessThan75mmInsertUserResult"></p>
+                            <!-- gap for result of meterage-->
+                            </p>
                         </li>
                         <li>
                             <label for="input1">Open Cut</label>
-                            <input type="text" id="input1" placeholder="Less than 75mm">
-                            <button>Submit</button>
+                            <input type="text" id="lessThan75mmOpenCutInput" id="input1" placeholder="Less than 75mm">
+                            <button
+                                onclick="calculateValue('lessThan75mmOpenCutInput', 0.79,'lessThan75mmOpenCutResult')">Submit</button>
                             <button>Clear</button>
+                            <p id="lessThan75mmOpenCutResult">
+                                <!-- gap for result of meterage-->
+                            </p>
+                        </li>
                         </li>
                         <li>
                             <label for="input1">Pre - EX</label>
-                            <input type="text" id="input1" placeholder="Less than 75mm">
-                            <button>Submit</button>
+                            <input type="text" id="lessThan75mmPreExInput" id="input1" placeholder="Less than 75mm">
+                            <button
+                                onclick="calculateValue('lessThan75mmPreExInput', 0.08,'lessThan75mmPreExResult')">Submit</button>
                             <button>Clear</button>
+                            <p id="lessThan75mmPreExResult">
+                                <!-- gap for result of meterage-->
+                            </p>
+                        </li>
+                        <li>
+                            <label for="input1">Total</label>
+                            <input type="text" id="totalbox" id="input1" placeholder="Total" disabled="disabled" />
                         </li>
                     </ul>
                 </div>
@@ -229,6 +263,8 @@
             </div>
         </div>
     </nav>
+
+
 
     <script src="JavaScript\script.js"></script>
 </body>

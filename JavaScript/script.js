@@ -12,16 +12,16 @@ function updateHistory(key, value) {
 //inputElemetId - HTML element that contains the users input
 //multipyer - the value to multiply the users input by
 //outputElementId - HTML element to display the result. 
-function calculateValue(inputElementId, multiplyer, outputElementId) {
-    let input = document.getElementById(inputElementId).value;
+function calculateValue(inputElementById, multiplyer, outputElementById) {
+    let input = document.getElementById(inputElementById).value;
     let result = (input * multiplyer).toFixed(1);
-    document.getElementById(outputElementId).textContent = `${result}%`;
-    updateHistory(inputElementId, result);
+    document.getElementById(outputElementById).textContent = `${result}%`;
+    updateHistory(inputElementById, result);
 }
 
-
-
-
+function clear() {
+    document.getElementById().reset();
+}
 
 
 function toggleDropdown(mainSubMenuId) {
