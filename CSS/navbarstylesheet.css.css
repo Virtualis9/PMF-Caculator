@@ -1,5 +1,31 @@
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+h4 {
+    text-align: center;
+}
+
+.howtouse {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+li {
+    text-align: center;
+}
+
 .submenu {
-    display: none; /* Hide all submenus by default */
+    display: none;
+    /* Hide all submenus by default */
+
 }
 
 #submenu1,
@@ -10,16 +36,60 @@
 #submenu6,
 #submenu7,
 #submenu8,
-#submenu9 {
+#submenu9,
+#submenu10,
+#submenu11,
+#submenu12,
+#submenu13,
+#submenu14,
+#submenu15,
+#submenu16,
+#submenu17,
+#submenu18,
+#submenu19,
+#submenu20,
+#submenu21,
+#submenu22,
+#submenu23,
+#submenu24,
+#submenu25,
+#submenu26,
+#submenu27,
+#submenu28,
+#submenu29,
+#submenu30,
+#submenu31,
+#submenu32,
+#submenu33,
+#submenu34,
+#submenu35,
+#submenu36,
+#submenu37,
+#submenu38,
+#submenu39,
+#submenu40,
+#submenu41,
+#submenu42,
+#submenu43,
+#submenu44,
+#submenu45,
+#submenu46,
+#submenu47,
+#submenu48 {
     border: 2px solid #555;
     border-radius: 10px;
     margin: 10px 0;
     width: 250px;
     padding: 10px;
+
 }
 
 .dropdown-content li {
     list-style: none;
+    text-align: center;
+
+
+
 }
 
 .dropdown-btn {
@@ -31,12 +101,18 @@
     border-radius: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    text-align: center;
+
+
+
+
 }
 
 .dropdown-btn:hover {
     background-color: #777;
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
     transform: scale(1.05);
+
 }
 
 .sub-btn {
@@ -71,6 +147,7 @@
     margin: 10px 0;
     width: 250px;
     padding: 10px;
+
 }
 
 /* Style for submit and clear buttons within each submenu */
@@ -83,11 +160,13 @@
     border-radius: 8px;
     margin-right: 5px;
     transition: background-color 0.3s, box-shadow 0.3s;
+
 }
 
 .submenu button:hover {
     background-color: #777;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
 }
 
 /* Style for input feilds */
@@ -99,5 +178,24 @@
     cursor: pointer;
     transition: background-color 0.3s, box-shadow 0.3s;
     position: relative;
+
+}
+
+#totalbox {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px 0;
+    padding: 10px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    position: relative;
+    border: 2px solid #555;
+    border-radius: 10px;
+
+}
+
+li {
+    list-style: none;
+
 
 }

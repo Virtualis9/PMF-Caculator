@@ -5,264 +5,1122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS\navbarstylesheet.css.css">
-    <title>Document</title>
+    <title>PMF aculator</title>
 </head>
 
 <body>
-    <nav>
+    <h1>Wales & West Performance Calculator.</h1>
+    <nav class="navbar">
+
         <div class="dropdown-container">
             <button class="dropdown-btn" onclick="toggleDropdown('mainSubMenu')">Main Laying</button>
             <button class="dropdown-btn" onclick="toggleDropdown('repairsSubMenu')">Repairs</button>
-            <div class="submenu" id="repairsSubMenu">
+            <button class="dropdown-btn" onclick="toggleDropdown('serviceLayingSubMenu')">Service Laying</button>
+            <button class="dropdown-btn" onclick="toggleDropdown('serviceLaying(ND)SubMenu')">Service
+                Laying(ND)</button>
+            <button class="dropdown-btn" onclick="toggleDropdown('otherWorkSubMenu')">Other Work</button>
+
+            <div class="submenu" id="otherWorkSubMenu">
                 <ul class="dropdown-content">
                     <li>
-                        <button class="sub-btn" onclick="toggleSubmenu('submenu1')">ERM2 (2" & below)</button>
-                        <button class="sub-btn" onclick="toggleSubmenu('submenu1')">ERM5 (5" > 3")</button>
-                        <button class="sub-btn" onclick="toggleSubmenu('submenu1')">ERM7 (7" > 6")</button>
-                        <button class="sub-btn" onclick="toggleSubmenu('submenu1')">ERM10 (10" > 8")</button>
-                        <button class="sub-btn" onclick="toggleSubmenu('submenu1')">ERM16 (16" > 12")</button>
-                        <button class="sub-btn" onclick="toggleSubmenu('submenu1')">ERM22 (22" > 18")</button>
-                        <button class="sub-btn" onclick="toggleSubmenu('submenu1')">ERM28 (28" > 24")</button>
-                        <button class="sub-btn" onclick="toggleSubmenu('submenu1')">ERM30 (30" & above)</button>
-                        <button class="sub-btn" onclick="toggleSubmenu('submenu1')">ERMD (Damaged Main)</button>
-                        <button class="sub-btn" onclick="toggleSubmenu('submenu1')">Service Repair</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu34')">Other leakage (NLD etc)</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu35')">Service Cut off</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu36')">Service Cut off - Large
+                            Dia</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu37')">DR4</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu38')">DR4S</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu39')">MO</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu40')">SO</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu41')">Surv</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu42')">Mains Gov Base</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu43')">Mains Gov Fit</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu44')">Mains Gov Remove</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu45')">Service Gov Base</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu46')">Service Gov Fit</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu47')">Service Gov Remove</button>
+
                     </li>
                 </ul>
-            </div>
-            <div class="submenu" id="mainSubMenu">
-                <ul class="dropdown-content">
-                    <li>
-                        <button class="sub-btn" onclick="toggleSubmenu('submenu1')">Less than 75mm</button>
-                        <button class="sub-btn" onclick="toggleSubmenu('submenu2')">More Than 75mm to 125mm</button>
-                        <button class="sub-btn" onclick="toggleSubmenu('submenu3')">140mm to 180mm</button>
-                        <button class="sub-btn" onclick="toggleSubmenu('submenu4')">250mm</button>
-                        <button class="sub-btn" onclick="toggleSubmenu('submenu5')">315mm to 255mm</button>
-                        <button class="sub-btn" onclick="toggleSubmenu('submenu6')">500mm</button>
-                        <button class="sub-btn" onclick="toggleSubmenu('submenu7')">630mm</button>
-                        <button class="sub-btn" onclick="toggleSubmenu('submenu8')">More than 630mm</button>
-                        <button class="sub-btn" onclick="toggleSubmenu('submenu9')">Per PON (40 Hour
-                            week)Abandon</button>
-                        <!-- Add buttons here and change number to suit. this will add more submenus-->
-                    </li>
-                </ul>
-                <!-- Submenus for each button make sure you change numbers to suit Change Div ID to related number -->
-                <div class="submenu" id="submenu1">
+                <div class="submenu" id="submenu34">
                     <ul class="dropdown-content">
-                        <!--Button 1 -->
                         <li>
-                            <label for="input1">Inserted</label>
-                            <input type="text" id="lessThan75mmInsertUserInput" id="input1"
-                                placeholder="Less than 75mm">
+                            <label for="input1">Other Leakage (NLD etc)</label>
+                            <input type="text" id="howmanyjobsUserInput" id="input1" placeholder="How many did you do?">
+
                             <button
-                                onclick="calculateValue('lessThan75mmInsertUserInput', 0.71,'lessThan75mmInsertUserResult')">Submit</button>
+                                onclick=" calculateValue('howmanyjobsUserInput', 4,'newExcistingUserResult')">Submit</button>
                             <button>Clear</button>
-                            <p id="lessThan75mmInsertUserResult"></p>
+                            <p id="newExcistingUserResult"></p>
                             <!-- gap for result of meterage-->
                             </p>
                         </li>
-                        <li>
-                            <label for="input1">Open Cut</label>
-                            <input type="text" id="lessThan75mmOpenCutInput" id="input1" placeholder="Less than 75mm">
-                            <button
-                                onclick="calculateValue('lessThan75mmOpenCutInput', 0.79,'lessThan75mmOpenCutResult')">Submit</button>
-                            <button>Clear</button>
-                            <p id="lessThan75mmOpenCutResult">
-                                <!-- gap for result of meterage-->
-                            </p>
-                        </li>
-                        </li>
-                        <li>
-                            <label for="input1">Pre - EX</label>
-                            <input type="text" id="lessThan75mmPreExInput" id="input1" placeholder="Less than 75mm">
-                            <button
-                                onclick="calculateValue('lessThan75mmPreExInput', 0.08,'lessThan75mmPreExResult')">Submit</button>
-                            <button>Clear</button>
-                            <p id="lessThan75mmPreExResult">
-                                <!-- gap for result of meterage-->
-                            </p>
-                        </li>
-                        <li>
-                            <label for="input1">Total</label>
-                            <input type="text" id="totalbox" id="input1" placeholder="Total" disabled="disabled" />
-                        </li>
                     </ul>
                 </div>
+            </div>
+            <div class="submenu" id="submenu35">
+                <ul class="dropdown-content">
+                    <li>
+                        <label for="input1">Service Cut Off</label>
+                        <input type="text" id="howmanyjobsUser1Input" id="input1" placeholder="How many did you do?">
 
-                <div class="submenu" id="submenu2">
+                        <button
+                            onclick=" calculateValue('howmanyjobsUser1Input', 5,'newExcistingUser1Result')">Submit</button>
+                        <button>Clear</button>
+                        <p id="newExcistingUser1Result"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="submenu" id="submenu36">
+                <ul class="dropdown-content">
+                    <li>
+                        <label for="input1">Service Cut Off - Large Dia</label>
+                        <input type="text" id="howmanyjobsUser2Input" id="input1" placeholder="How many did you do?">
+
+                        <button
+                            onclick=" calculateValue('howmanyjobsUser2Input', 12.50,'newExcistingUser2Result')">Submit</button>
+                        <button>Clear</button>
+                        <p id="newExcistingUser2Result"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="submenu" id="submenu37">
+                <ul class="dropdown-content">
+                    <li>
+                        <label for="input1">DR4</label>
+                        <input type="text" id="howmanyjobsUser3Input" id="input1" placeholder="How many did you do?">
+
+                        <button
+                            onclick=" calculateValue('howmanyjobsUser3Input', 23.50,'newExcistingUser3Result')">Submit</button>
+                        <button>Clear</button>
+                        <p id="newExcistingUser3Result"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="submenu" id="submenu38">
+                <ul class="dropdown-content">
+                    <li>
+                        <label for="input1">DR4S</label>
+                        <input type="text" id="howmanyjobsUser4Input" id="input1" placeholder="How many did you do?">
+
+                        <button
+                            onclick=" calculateValue('howmanyjobsUser4Input', 2.42,'newExcistingUser4Result')">Submit</button>
+                        <button>Clear</button>
+                        <p id="newExcistingUser4Result"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="submenu" id="submenu39">
+                <ul class="dropdown-content">
+                    <li>
+                        <label for="input1">MO</label>
+                        <input type="text" id="howmanyjobsUser5Input" id="input1" placeholder="How many did you do?">
+
+                        <button
+                            onclick=" calculateValue('howmanyjobsUser5Input', 2.50,'newExcistingUser5Result')">Submit</button>
+                        <button>Clear</button>
+                        <p id="newExcistingUser5Result"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="submenu" id="submenu40">
+                <ul class="dropdown-content">
+                    <li>
+                        <label for="input1">SO</label>
+                        <input type="text" id="howmanyjobsUser6Input" id="input1" placeholder="How many did you do?">
+
+                        <button
+                            onclick=" calculateValue('howmanyjobsUser6Input', 2.50,'newExcistingUser6Result')">Submit</button>
+                        <button>Clear</button>
+                        <p id="newExcistingUser6Result"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="submenu" id="submenu41">
+                <ul class="dropdown-content">
+                    <li>
+                        <label for="input1">Surv</label>
+                        <input type="text" id="howmanyjobsUser7Input" id="input1" placeholder="How many did you do?">
+
+                        <button
+                            onclick=" calculateValue('howmanyjobsUser7Input', 2.50,'newExcistingUser7Result')">Submit</button>
+                        <button>Clear</button>
+                        <p id="newExcistingUser7Result"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="submenu" id="submenu42">
+                <ul class="dropdown-content">
+                    <li>
+                        <label for="input1">Mains Gov Base</label>
+                        <input type="text" id="howmanyjobsUser8Input" id="input1" placeholder="How many did you do?">
+
+                        <button
+                            onclick=" calculateValue('howmanyjobsUser8Input', 27.50,'newExcistingUser8Result')">Submit</button>
+                        <button>Clear</button>
+                        <p id="newExcistingUser8Result"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="submenu" id="submenu43">
+                <ul class="dropdown-content">
+                    <li>
+                        <label for="input1">Mains Gov Fit</label>
+                        <input type="text" id="howmanyjobsUser9Input" id="input1" placeholder="How many did you do?">
+
+                        <button
+                            onclick=" calculateValue('howmanyjobsUser9Input', 12.50,'newExcistingUser9Result')">Submit</button>
+                        <button>Clear</button>
+                        <p id="newExcistingUser9Result"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="submenu" id="submenu44">
+                <ul class="dropdown-content">
+                    <li>
+                        <label for="input1">Mains Gov Remove</label>
+                        <input type="text" id="howmanyjobsUser10Input" id="input1" placeholder="How many did you do?">
+
+                        <button
+                            onclick=" calculateValue('howmanyjobsUser10Input', 12.50,'newExcistingUser10Result')">Submit</button>
+                        <button>Clear</button>
+                        <p id="newExcistingUser10Result"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="submenu" id="submenu45">
+                <ul class="dropdown-content">
+                    <li>
+                        <label for="input1">Service Gov Base </label>
+                        <input type="text" id="howmanyjobsUser11Input" id="input1" placeholder="How many did you do?">
+
+                        <button
+                            onclick=" calculateValue('howmanyjobsUser11Input', 7.50,'newExcistingUser11Result')">Submit</button>
+                        <button>Clear</button>
+                        <p id="newExcistingUser11Result"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="submenu" id="submenu46">
+                <ul class="dropdown-content">
+                    <li>
+                        <label for="input1">Service Gov Fit </label>
+                        <input type="text" id="howmanyjobsUser12Input" id="input1" placeholder="How many did you do?">
+
+                        <button
+                            onclick=" calculateValue('howmanyjobsUser12Input', 12.50,'newExcistingUser12Result')">Submit</button>
+                        <button>Clear</button>
+                        <p id="newExcistingUser12Result"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="submenu" id="submenu47">
+                <ul class="dropdown-content">
+                    <li>
+                        <label for="input1">Service Gov Remove </label>
+                        <input type="text" id="howmanyjobsUser13Input" id="input1" placeholder="How many did you do?">
+
+                        <button
+                            onclick=" calculateValue('howmanyjobsUser13Input', 7.50,'newExcistingUser13Result')">Submit</button>
+                        <button>Clear</button>
+                        <p id="newExcistingUser13Result"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="submenu" id="serviceLaying(ND)SubMenu">
+                <ul class="dropdown-content">
+                    <li>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu29')">New Service</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu30')">Alteration</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu31')">Relay(Escape)</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu32')">Relay</button>
+                        <button class="sub-btn" onclick="toggleSubmenu('submenu33')">Transfer</button>
+                    </li>
+                </ul>
+                <div class="submenu" id="submenu29">
                     <ul class="dropdown-content">
-                        <!-- Button 2 -->
                         <li>
-                            <label for="input1">Inserted</label>
-                            <input type="text" id="input1" placeholder="More Than 75mm to 125mm">
-                            <button>Submit</button>
+                            <label for="input1">New Service</label>
+                            <input type="text" id="howmanyjobsUserInput" id="input1" placeholder="How many did you do?">
+                            <input type="text" id="howmnaymetersUserInput" id="input1" placeholder="Meters Layed?">
+                            <button
+                                onclick="serviceLaying('howmanyjobsUserInput', 6.67,'howmnaymetersUserInput', 1.72,'newExcistingUserResult')">Submit</button>
                             <button>Clear</button>
-                        </li>
-                        <li>
-                            <label for="input1">Open Cut</label>
-                            <input type="text" id="input1" placeholder="More Than 75mm to 125mm">
-                            <button>Submit</button>
-                            <button>Clear</button>
-                        </li>
-                        <li>
-                            <label for="input1">Pre - EX</label>
-                            <input type="text" id="input1" placeholder="More Than 75mm to 125mm">
-                            <button>Submit</button>
-                            <button>Clear</button>
-                        </li>
-                    </ul>
-                </div>
-                <div class="submenu" id="submenu3">
-                    <ul class="dropdown-content">
-                        <!-- Button 3 -->
-                        <li>
-                            <label for="input1">Inserted</label>
-                            <input type="text" id="input1" placeholder="140mm to 180mm">
-                            <button>Submit</button>
-                            <button>Clear</button>
-                        </li>
-                        <li>
-                            <label for="input1">Open Cut</label>
-                            <input type="text" id="input1" placeholder="140mm to 180mm">
-                            <button>Submit</button>
-                            <button>Clear</button>
-                        </li>
-                        <li>
-                            <label for="input1">Pre - EX</label>
-                            <input type="text" id="input1" placeholder="140mm to 180mm">
-                            <button>Submit</button>
-                            <button>Clear</button>
-                        </li>
-                    </ul>
-                </div>
-                <div class="submenu" id="submenu4">
-                    <ul class="dropdown-content">
-                        <!-- Button 4 -->
-                        <li>
-                            <label for="input1">Inserted</label>
-                            <input type="text" id="input1" placeholder="250mm">
-                            <button>Submit</button>
-                            <button>Clear</button>
-                        </li>
-                        <li>
-                            <label for="input1">Open Cut</label>
-                            <input type="text" id="input1" placeholder="250mm">
-                            <button>Submit</button>
-                            <button>Clear</button>
-                        </li>
-                        <li>
-                            <label for="input1">Pre - EX</label>
-                            <input type="text" id="input1" placeholder="250mm">
-                            <button>Submit</button>
-                            <button>Clear</button>
-                        </li>
-                    </ul>
-                </div>
-                <div class="submenu" id="submenu5">
-                    <ul class="dropdown-content">
-                        <!-- Button 5 -->
-                        <li>
-                            <label for="input1">Inserted</label>
-                            <input type="text" id="input1" placeholder="315mm to 255mm">
-                            <button>Submit</button>
-                            <button>Clear</button>
-                        </li>
-                        <li>
-                            <label for="input1">Open Cut</label>
-                            <input type="text" id="input1" placeholder="315mm to 255mm">
-                            <button>Submit</button>
-                            <button>Clear</button>
-                        </li>
-                        <li>
-                            <label for="input1">Pre - EX</label>
-                            <input type="text" id="input1" placeholder="315mm to 255mm">
-                            <button>Submit</button>
-                            <button>Clear</button>
-                        </li>
-                    </ul>
-                </div>
-                <div class="submenu" id="submenu6">
-                    <ul class="dropdown-content">
-                        <!-- Button 6 -->
-                        <li>
-                            <label for="input1">Inserted</label>
-                            <input type="text" id="input1" placeholder="500mm">
-                            <button>Submit</button>
-                            <button>Clear</button>
-                        </li>
-                        <li>
-                            <label for="input1">Open Cut</label>
-                            <input type="text" id="input1" placeholder="500mm">
-                            <button>Submit</button>
-                            <button>Clear</button>
-                        </li>
-                        <li>
-                            <label for="input1">Pre - EX</label>
-                            <input type="text" id="input1" placeholder="500mm">
-                            <button>Submit</button>
-                            <button>Clear</button>
-                        </li>
-                    </ul>
-                </div>
-                <div class="submenu" id="submenu7">
-                    <ul class="dropdown-content">
-                        <!-- Button 7 -->
-                        <li>
-                            <label for="input1">Inserted</label>
-                            <input type="text" id="input1" placeholder="630mm">
-                            <button>Submit</button>
-                            <button>Clear</button>
-                        </li>
-                        <li>
-                            <label for="input1">Open Cut</label>
-                            <input type="text" id="input1" placeholder="630mm">
-                            <button>Submit</button>
-                            <button>Clear</button>
-                        </li>
-                        <li>
-                            <label for="input1">Pre - EX</label>
-                            <input type="text" id="input1" placeholder="630mm">
-                            <button>Submit</button>
-                            <button>Clear</button>
-                        </li>
-                    </ul>
-                </div>
-                <div class="submenu" id="submenu8">
-                    <ul class="dropdown-content">
-                        <!-- Button 8 -->
-                        <li>
-                            <label for="input1">Inserted</label>
-                            <input type="text" id="input1" placeholder="More than 630mm">
-                            <button>Submit</button>
-                            <button>Clear</button>
-                        </li>
-                        <li>
-                            <label for="input1">Open Cut</label>
-                            <input type="text" id="input1" placeholder="More than 630mm">
-                            <button>Submit</button>
-                            <button>Clear</button>
-                        </li>
-                        <li>
-                            <label for="input1">Pre - EX</label>
-                            <input type="text" id="input1" placeholder="More than 630mm">
-                            <button>Submit</button>
-                            <button>Clear</button>
-                        </li>
-                    </ul>
-                </div>
-                <div class="submenu" id="submenu9">
-                    <ul class="dropdown-content">
-                        <!-- Button 9 -->
-                        <li>
-                            <label for="input1">PER PON (40 hour week) ABANDON</label>
-                            <input type="text" id="input1" placeholder="Per PON">
-                            <button>Submit</button>
-                            <button>Clear</button>
+                            <p id="newExcistingUserResult"></p>
+                            <!-- gap for result of meterage-->
+                            </p>
                         </li>
                     </ul>
                 </div>
             </div>
+            <div class="submenu" id="submenu30">
+                <ul class="dropdown-content">
+                    <li>
+                        <label for="input1">Alteration</label>
+                        <input type="text" id="howmanyjobsUser1Input" id="input1" placeholder="How many did you do?">
+                        <input type="text" id="howmnaymetersUser1Input" id="input1" placeholder="Meters Layed?">
+                        <button
+                            onclick="serviceLaying('howmanyjobsUser1Input', 8,'howmnaymetersUser1Input', 0.14,'newExcistingUser1Result')">Submit</button>
+                        <button>Clear</button>
+                        <p id="newExcistingUser1Result"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                </ul>
+            </div>
         </div>
+        <div class="submenu" id="submenu31">
+            <ul class="dropdown-content">
+                <li>
+                    <label for="input1">Relay (Escape)</label>
+                    <input type="text" id="howmanyjobsUser2Input" id="input1" placeholder="How many did you do?">
+                    <input type="text" id="howmnaymetersUser2Input" id="input1" placeholder="Meters Layed?">
+                    <button
+                        onclick="serviceLaying('howmanyjobsUser2Input', 5,'howmnaymetersUser2Input', 0.69,'newExcistingUser2Result')">Submit</button>
+                    <button>Clear</button>
+                    <p id="newExcistingUser2Result"></p>
+                    <!-- gap for result of meterage-->
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="submenu" id="submenu32">
+            <ul class="dropdown-content">
+                <li>
+                    <label for="input1">Relay</label>
+                    <input type="text" id="howmanyjobsUser3Input" id="input1" placeholder="How many did you do?">
+                    <input type="text" id="howmnaymetersUser3Input" id="input1" placeholder="Meters Layed?">
+                    <button
+                        onclick="serviceLaying('howmanyjobsUser3Input', 5,'howmnaymetersUser3Input', 0.69,'newExcistingUser3Result')">Submit</button>
+                    <button>Clear</button>
+                    <p id="newExcistingUser3Result"></p>
+                    <!-- gap for result of meterage-->
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="submenu" id="submenu33">
+            <ul class="dropdown-content">
+                <li>
+                    <label for="input1">Transfer</label>
+                    <input type="text" id="howmanyjobsUser4Input" id="input1" placeholder="How many did you do?">
+
+                    <button
+                        onclick="calculateValue('howmanyjobsUser4Input', 6.25,'newExcistingUser4Result')">Submit</button>
+                    <button>Clear</button>
+                    <p id="newExcistingUser4Result"></p>
+                    <!-- gap for result of meterage-->
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="submenu" id="serviceLayingSubMenu">
+            <ul class="dropdown-content">
+                <li>
+                    <button class="sub-btn" onclick="toggleSubmenu('submenu20')">New to Existing</button>
+                    <button class="sub-btn" onclick="toggleSubmenu('submenu21')">New to New House</button>
+                    <button class="sub-btn" onclick="toggleSubmenu('submenu22')">New on Site</button>
+                    <button class="sub-btn" onclick="toggleSubmenu('submenu23')">Alteration</button>
+                    <button class="sub-btn" onclick="toggleSubmenu('submenu24')">Replay(Escape)</button>
+                    <button class="sub-btn" onclick="toggleSubmenu('submenu25')">Relay on Scheme</button>
+                    <button class="sub-btn" onclick="toggleSubmenu('submenu26')">Relay MOBs</button>
+                    <button class="sub-btn" onclick="toggleSubmenu('submenu27')">Transfer</button>
+                    <button class="sub-btn" onclick="toggleSubmenu('submenu28')">Mini Transfer(RIGS)</button>
+                </li>
+            </ul>
+            <div class="submenu" id="submenu20">
+                <ul class="dropdown-content">
+                    <li>
+                        <label for="input1">New to Existing</label>
+                        <input type="text" id="howmanyjobsUserInput" id="input1" placeholder="How many did you do?">
+                        <input type="text" id="howmnaymetersUserInput" id="input1" placeholder="Meters Layed?">
+                        <button
+                            onclick="serviceLaying('howmanyjobsUserInput', 6.25,'howmnaymetersUserInput', 1.50,'newExcistingUserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="newExcistingUserResult"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="submenu" id="submenu21">
+                <ul class="dropdown-content">
+                    <li>
+                        <label for="input1">New to New House</label>
+                        <input type="text" id="howmanyjobsUser1Input" id="input1" placeholder="How many did you do?">
+                        <input type="text" id="howmnaymetersUser1Input" id="input1" placeholder="Meters Layed?">
+                        <button
+                            onclick="serviceLaying('howmanyjobsUser1Input', 6.25,'howmnaymetersUser1Input', 1.50,'newExcistingUser1Result')">Submit</button>
+                        <button>Clear</button>
+                        <p id="newExcistingUser1Result"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="submenu" id="submenu22">
+                <ul class="dropdown-content">
+                    <li>
+                        <label for="input1">New on Site</label>
+                        <input type="text" id="howmanyjobsUser2Input" id="input1" placeholder="How many did you do?">
+                        <input type="text" id="howmnaymetersUser2Input" id="input1" placeholder="Meters Layed?">
+                        <button
+                            onclick="serviceLaying('howmanyjobsUser2Input', 6.25,'howmnaymetersUser2Input', 0.15,'newExcistingUser2Result')">Submit</button>
+                        <button>Clear</button>
+                        <p id="newExcistingUser2Result"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="submenu" id="submenu23">
+            <ul class="dropdown-content">
+                <li>
+                    <label for="input1">Alteration</label>
+                    <input type="text" id="howmanyjobsUser3Input" id="input1" placeholder="How many did you do?">
+                    <input type="text" id="howmnaymetersUser3Input" id="input1" placeholder="Meters Layed?">
+                    <button
+                        onclick="serviceLaying('howmanyjobsUser3Input', 6.25,'howmnaymetersUser3Input', 0.15,'newExcistingUser3Result')">Submit</button>
+                    <button>Clear</button>
+                    <p id="newExcistingUser3Result"></p>
+                    <!-- gap for result of meterage-->
+                    </p>
+                </li>
+            </ul>
+        </div>
+        </div>
+        <div class="submenu" id="submenu24">
+            <ul class="dropdown-content">
+                <li>
+                    <label for="input1">Relay(Escape)</label>
+                    <input type="text" id="howmanyjobsUser4Input" id="input1" placeholder="How many did you do?">
+                    <input type="text" id="howmnaymetersUser4Input" id="input1" placeholder="Meters Layed?">
+                    <button
+                        onclick="serviceLaying('howmanyjobsUser4Input', 5,'howmnaymetersUser4Input', 0.60,'newExcistingUser4Result')">Submit</button>
+                    <button>Clear</button>
+                    <p id="newExcistingUser4Result"></p>
+                    <!-- gap for result of meterage-->
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="submenu" id="submenu25">
+            <ul class="dropdown-content">
+                <li>
+                    <label for="input1">Relay on Scheme</label>
+                    <input type="text" id="howmanyjobsUser5Input" id="input1" placeholder="How many did you do?">
+                    <input type="text" id="howmnaymetersUser5Input" id="input1"
+                        placeholder="how many meters did you push?">
+                    <button
+                        onclick="serviceLaying('howmanyjobsUser5Input', 5,'howmnaymetersUser5Input', 0.60,'newExcistingUser5Result')">Submit</button>
+                    <button>Clear</button>
+                    <p id="newExcistingUser5Result"></p>
+                    <!-- gap for result of meterage-->
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="submenu" id="submenu26">
+            <ul class="dropdown-content">
+                <li>
+                    <label for="input1">Relay MOBs</label>
+                    <input type="text" id="howmanyjobsUser6Input" id="input1" placeholder="How many did you do?">
+                    <button
+                        onclick="calculateValue('howmanyjobsUser6Input', 4.17,'newExcistingUser6Result')">Submit</button>
+                    <button>Clear</button>
+                    <p id="newExcistingUser6Result"></p>
+                    <!-- gap for result of meterage-->
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="submenu" id="submenu27">
+            <ul class="dropdown-content">
+                <li>
+                    <label for="input1">Transfer</label>
+                    <input type="text" id="howmanyjobsUser7Input" id="input1" placeholder="How many Transfers?">
+                    <button
+                        onclick="calculateValue('howmanyjobsUser7Input', 6.96,'newExcistingUser7Result')">Submit</button>
+                    <button>Clear</button>
+                    <p id="newExcistingUser7Result"></p>
+                    <!-- gap for result of meterage-->
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="submenu" id="submenu28">
+            <ul class="dropdown-content">
+                <li>
+                    <label for="input1">Mini Transfer(RIGS)</label>
+                    <input type="text" id="howmanyjobsUser8Input" id="input1" placeholder="How many Transfers?">
+                    <button
+                        onclick="calculateValue('howmanyjobsUser8Input', 2.50,'newExcistingUser8Result')">Submit</button>
+                    <button>Clear</button>
+                    <p id="newExcistingUser8Result"></p>
+                    <!-- gap for result of meterage-->
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="submenu" id="repairsSubMenu">
+            <ul class="dropdown-content">
+                <li>
+                    <button class="sub-btn" onclick="toggleSubmenu('submenu10')">ERM2 (2" & below)</button>
+                    <button class="sub-btn" onclick="toggleSubmenu('submenu11')">ERM5 (5" > 3")</button>
+                    <button class="sub-btn" onclick="toggleSubmenu('submenu12')">ERM7 (7" > 6")</button>
+                    <button class="sub-btn" onclick="toggleSubmenu('submenu13')">ERM10 (10" > 8")</button>
+                    <button class="sub-btn" onclick="toggleSubmenu('submenu14')">ERM16 (16" > 12")</button>
+                    <button class="sub-btn" onclick="toggleSubmenu('submenu15')">ERM22 (22" > 18")</button>
+                    <button class="sub-btn" onclick="toggleSubmenu('submenu16')">ERM28 (28" > 24")</button>
+                    <button class="sub-btn" onclick="toggleSubmenu('submenu17')">ERM30 (30" & above)</button>
+                    <button class="sub-btn" onclick="toggleSubmenu('submenu18')">ERMD (Damaged Main)</button>
+                    <button class="sub-btn" onclick="toggleSubmenu('submenu19')">Service Repair</button>
+                </li>
+            </ul>
+            <div class="submenu" id="submenu10"><!--ERM2 block-->
+                <ul class="dropdown-content">
+                    <li>
+                        <label for="input1">ERM2 Primary Repair</label>
+                        <input type="text" id="primaryRepair1UserInput" id="input1" placeholder="First Repair">
+                        <button
+                            onclick="calculateValue('primaryRepair1UserInput', 8.19,'primaryRepair1UserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="primaryRepair1UserResult"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                    <li>
+                        <label for="input1">ERM2 Secondary Repair</label>
+                        <input type="text" id="secondRepair1UserInput" id="input1" placeholder="Second Repair">
+                        <button
+                            onclick="calculateValue('secondRepair1UserInput', 2.98,'secondRepair1UserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="secondRepair1UserResult"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="submenu" id="submenu11"><!--ERM5 block-->
+                <ul class="dropdown-content">
+                    <li>
+                        <label for="input1">ERM5 Primary Repair</label>
+                        <input type="text" id="primaryRepair2UserInput" id="input1" placeholder="First Repair">
+                        <button
+                            onclick="calculateValue('primaryRepair2UserInput', 13.90,'primaryRepair2UserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="primaryRepair2UserResult"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                    <li>
+                        <label for="input1">ERM5 Secondary Repair</label>
+                        <input type="text" id="secondRepair2UserInput" id="input1" placeholder="Second Repair">
+                        <button
+                            onclick="calculateValue('secondRepair2UserInput', 5.07,'secondRepair2UserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="secondRepair2UserResult"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="submenu" id="submenu12"><!--ERM7 block-->
+                <ul class="dropdown-content">
+                    <li>
+                        <label for="input1">ERM7 Primary Repair</label>
+                        <input type="text" id="primaryRepair3UserInput" id="input1" placeholder="First Repair">
+                        <button
+                            onclick="calculateValue('primaryRepair3UserInput', 14.90,'primaryRepair3UserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="primaryRepair3UserResult"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                    <li>
+                        <label for="input1">ERM7 Secondary Repair</label>
+                        <input type="text" id="secondRepair3UserInput" id="input1" placeholder="Second Repair">
+                        <button
+                            onclick="calculateValue('secondRepair3UserInput', 5.30,'secondRepair3UserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="secondRepair3UserResult"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="submenu" id="submenu13"><!--ERM10 block-->
+                <ul class="dropdown-content">
+                    <li>
+                        <label for="input1">ERM10 Primary Repair</label>
+                        <input type="text" id="primaryRepair4UserInput" id="input1" placeholder="First Repair">
+                        <button
+                            onclick="calculateValue('primaryRepair4UserInput', 17.01,'primaryRepair4UserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="primaryRepair4UserResult"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                    <li>
+                        <label for="input1">ERM10 Secondary Repair</label>
+                        <input type="text" id="secondRepair4UserInput" id="input1" placeholder="Second Repair">
+                        <button
+                            onclick="calculateValue('secondRepair4UserInput', 6.18,'secondRepair4UserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="secondRepair4UserResult"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="submenu" id="submenu14"><!--ERM16 block-->
+                <ul class="dropdown-content">
+                    <li>
+                        <label for="input1">ERM16 Primary Repair</label>
+                        <input type="text" id="primaryRepair5UserInput" id="input1" placeholder="First Repair">
+                        <button
+                            onclick="calculateValue('primaryRepair5UserInput', 19.33,'primaryRepair5UserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="primaryRepair5UserResult"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                    <li>
+                        <label for="input1">ERM16 Secondary Repair</label>
+                        <input type="text" id="secondRepair5UserInput" id="input1" placeholder="Second Repair">
+                        <button
+                            onclick="calculateValue('secondRepair5UserInput', 7.03,'secondRepair5UserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="secondRepair5UserResult"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="submenu" id="submenu15"><!--ERM22 block-->
+                <ul class="dropdown-content">
+                    <li>
+                        <label for="input1">ERM22 Primary Repair</label>
+                        <input type="text" id="primaryRepair6UserInput" id="input1" placeholder="First Repair">
+                        <button
+                            onclick="calculateValue('primaryRepair6UserInput', 20.49,'primaryRepair6UserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="primaryRepair6UserResult"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                    <li>
+                        <label for="input1">ERM22 Secondary Repair</label>
+                        <input type="text" id="secondRepair6UserInput" id="input1" placeholder="Second Repair">
+                        <button
+                            onclick="calculateValue('secondRepair6UserInput', 7.45,'secondRepair6UserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="secondRepair6UserResult"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="submenu" id="submenu16"><!--ERM28 block-->
+                <ul class="dropdown-content">
+                    <li>
+                        <label for="input1">ERM28 Primary Repair</label>
+                        <input type="text" id="primaryRepair7UserInput" id="input1" placeholder="First Repair">
+                        <button
+                            onclick="calculateValue('primaryRepair7UserInput', 22.94,'primaryRepair7UserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="primaryRepair7UserResult"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                    <li>
+                        <label for="input1">ERM28 Secondary Repair</label>
+                        <input type="text" id="secondRepair7UserInput" id="input1" placeholder="Second Repair">
+                        <button
+                            onclick="calculateValue('secondRepair7UserInput', 8.34,'secondRepair7UserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="secondRepair7UserResult"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="submenu" id="submenu17"><!--ERM30 block-->
+                <ul class="dropdown-content">
+                    <li>
+                        <label for="input1">ERM30 Primary Repair</label>
+                        <input type="text" id="primaryRepair8UserInput" id="input1" placeholder="First Repair">
+                        <button
+                            onclick="calculateValue('primaryRepair8UserInput', 32.78,'primaryRepair8UserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="primaryRepair8UserResult"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                    <li>
+                        <label for="input1">ERM30 Secondary Repair</label>
+                        <input type="text" id="secondRepair8UserInput" id="input1" placeholder="Second Repair">
+                        <button
+                            onclick="calculateValue('secondRepair8UserInput', 11.92,'secondRepair8UserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="secondRepair8UserResult"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="submenu" id="submenu18"><!--ERMD block-->
+                <ul class="dropdown-content">
+                    <li>
+                        <label for="input1">ERMD Primary Repair</label>
+                        <input type="text" id="primaryRepair9UserInput" id="input1" placeholder="First Repair">
+                        <button
+                            onclick="calculateValue('primaryRepair9UserInput', 19.33,'primaryRepair9UserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="primaryRepair9UserResult"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                    <li>
+                        <label for="input1">ERMD Secondary Repair</label>
+                        <input type="text" id="secondRepair9UserInput" id="input1" placeholder="Second Repair">
+                        <button
+                            onclick="calculateValue('secondRepair9UserInput', 7.03,'secondRepair9UserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="secondRepair9UserResult"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="submenu" id="submenu19"><!--Service Repair block-->
+                <ul class="dropdown-content">
+                    <li>
+                        <label for="input1">Service Repair</label>
+                        <input type="text" id="primaryRepair10UserInput" id="input1" placeholder="First Repair">
+                        <button
+                            onclick="calculateValue('primaryRepair10UserInput', 5,'primaryRepair10UserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="primaryRepair10UserResult"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+        <div class="submenu" id="mainSubMenu">
+            <ul class="dropdown-content">
+                <li>
+                    <button class="sub-btn" onclick="toggleSubmenu('submenu1')">Less than 75mm</button>
+                    <button class="sub-btn" onclick="toggleSubmenu('submenu2')">More Than 75mm to 125mm</button>
+                    <button class="sub-btn" onclick="toggleSubmenu('submenu3')">140mm to 180mm</button>
+                    <button class="sub-btn" onclick="toggleSubmenu('submenu4')">250mm</button>
+                    <button class="sub-btn" onclick="toggleSubmenu('submenu5')">315mm to 255mm</button>
+                    <button class="sub-btn" onclick="toggleSubmenu('submenu6')">500mm</button>
+                    <button class="sub-btn" onclick="toggleSubmenu('submenu7')">630mm</button>
+                    <button class="sub-btn" onclick="toggleSubmenu('submenu8')">More than 630mm</button>
+                    <button class="sub-btn" onclick="toggleSubmenu('submenu9')">Per PON (40 Hour
+                        week)Abandon</button>
+
+
+                    <!-- Add buttons here and change number to suit. this will add more submenus-->
+                </li>
+            </ul>
+            <!-- Submenus for each button make sure you change numbers to suit Change Div ID to related number -->
+            <div class="submenu" id="submenu1">
+                <ul class="dropdown-content">
+                    <!--Button 1 -->
+                    <li>
+                        <label for="input1">Inserted</label>
+                        <input type="text" id="lessThan75mmInsertUserInput" id="input1" placeholder="Less than 75mm">
+                        <button
+                            onclick="calculateValue('lessThan75mmInsertUserInput', 0.71,'lessThan75mmInsertUserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="lessThan75mmInsertUserResult"></p>
+                        <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                    <li>
+                        <label for="input1">Open Cut</label>
+                        <input type="text" id="lessThan75mmOpenCutUserInput" id="input1" placeholder="Less than 75mm">
+                        <button
+                            onclick="calculateValue('lessThan75mmOpenCutUserInput', 0.79,'lessThan75mmOpenCutUserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="lessThan75mmOpenCutUserResult">
+                            <!-- gap for result of meterage-->
+                        </p>
+                    </li>
+                    </li>
+                    <li>
+                        <label for="input1">Pre - EX</label>
+                        <input type="text" id="lessThan75mmPreExUserInput" id="input1" placeholder="Less than 75mm">
+                        <button
+                            onclick="calculateValue('lessThan75mmPreExUserInput', 0.08,'lessThan75mmPreExUserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="lessThan75mmPreExUserResult">
+                            <!-- gap for result of meterage -->
+
+                        </p>
+
+
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="submenu" id="submenu2">
+                <ul class="dropdown-content">
+                    <!-- Button 2 -->
+                    <li>
+                        <label for="input2">Inserted</label>
+                        <input type="text" id="moreThan75mmTo125mmInsetedUserInput" id="input1"
+                            placeholder="More Than 75mm to 125mm">
+                        <button
+                            onclick="calculateValue('moreThan75mmTo125mmInsetedUserInput', 0.88,'moreThan75mmTo125mmInsertedUserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="moreThan75mmTo125mmInsertedUserResult">
+                            <!-- gap for result of meterage -->
+
+                        </p>
+                    </li>
+                    <li>
+                        <label for="input1">Open Cut</label>
+                        <input type="text" id="moreThan75mmTo125mmOpenCutUserInput" id="input1"
+                            placeholder="More Than 75mm to 125mm">
+                        <button
+                            onclick="calculateValue('moreThan75mmTo125mmOpenCutUserInput', 0.96,'moreThan75mmTo125mmOpenCutUserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="moreThan75mmTo125mmOpenCutUserResult">
+                            <!-- gap for result of meterage -->
+
+                        </p>
+                    </li>
+                    <li>
+                        <label for="input1">Pre - EX</label>
+                        <input type="text" id="moreThan75mmTo125mmPre-ExUserInput" id="input1"
+                            placeholder="More Than 75mm to 125mm">
+                        <button
+                            onclick="calculateValue('moreThan75mmTo125mmPre-ExUserInput', 0.13,'moreThan75mmTo125mmPre-ExUserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="moreThan75mmTo125mmPre-ExUserResult">
+                            <!-- gap for result of meterage -->
+
+                        </p>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="submenu" id="submenu3">
+                <ul class="dropdown-content">
+                    <!-- Button 3 -->
+                    <li>
+                        <label for="input1">Inserted</label>
+                        <input type="text" id="oneFourtyToOneEightyInsertedUserInput" id="input1"
+                            placeholder="140mm to 180mm">
+                        <button
+                            onclick="calculateValue('oneFourtyToOneEightyInsertedUserInput', 1.17,'oneFourtyToOneEightyInsertedUserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="oneFourtyToOneEightyInsertedUserResult">
+                            <!-- gap for result of meterage -->
+
+                        </p>
+
+
+                    </li>
+                    <li>
+                        <label for="input1">Open Cut</label>
+                        <input type="text" id="oneFourtyToOneEightyOpenCutUserInput" id="input1"
+                            placeholder="140mm to 180mm">
+                        <button
+                            onclick="calculateValue('oneFourtyToOneEightyOpenCutUserInput', 1.38,'oneFourtyToOneEightyOpenCutUserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="oneFourtyToOneEightyopenCutUserResult">
+                            <!-- gap for result of meterage -->
+
+                        </p>
+                    </li>
+                    <li>
+                        <label for="input1">Pre - EX</label>
+                        <input type="text" id="oneFourtyToOneEightyPre-ExUserInput" id="input1"
+                            placeholder="140mm to 180mm">
+                        <button
+                            onclick="calculateValue('oneFourtyToOneEightyPre-ExUserInput', 0.13,'oneFourtyToOneEightyPre-ExUserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="oneFourtyToOneEightyPre-ExUserResult">
+                            <!-- gap for result of meterage -->
+
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="submenu" id="submenu4">
+                <ul class="dropdown-content">
+                    <!-- Button 4 -->
+                    <li>
+                        <label for="input1">Inserted</label>
+                        <input type="text" id="twoFiftyInsertedUserInput" id="input1" placeholder="250mm">
+                        <button
+                            onclick="calculateValue('twoFiftyInsertedUserInput', 1.38,'twoFiftyInsertedUserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="twoFiftyInsertedUserResult">
+                            <!-- gap for result of meterage -->
+
+                        </p>
+                    </li>
+                    <li>
+                        <label for="input1">Open Cut</label>
+                        <input type="text" id="twoFiftyOpenCutUserInput" id="input1" placeholder="250mm">
+                        <button
+                            onclick="calculateValue('twoFiftyOpenCutUserInput', 1.88,'twoFiftyOpenCutInputUserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="twoFiftyOpenCutInputUserResult">
+                            <!-- gap for result of meterage -->
+
+                        </p>
+                    </li>
+                    <li>
+                        <label for="input1">Pre - EX</label>
+                        <input type="text" id="twoFiftyPre-ExUserInput" id="input1" placeholder="250mm">
+                        <button
+                            onclick="calculateValue('twoFiftyPre-ExUserInput', 1.38,'twoFiftyPre-ExInputUserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="twoFiftyPre-ExInputUserResult">
+                            <!-- gap for result of meterage -->
+
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="submenu" id="submenu5">
+                <ul class="dropdown-content">
+                    <!-- Button 5 -->
+                    <li>
+                        <label for="input1">Inserted</label>
+                        <input type="text" id="threeOneFiveToTwoFiftyFiveInsertedUserInput" id="input1"
+                            placeholder="315mm to 255mm">
+                        <button
+                            onclick="calculateValue('threeOneFiveToTwoFiftyFiveInsertedUserInput', 1.88,'threeOneFiveToTwoFiftyFiveInsertedUserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="threeOneFiveToTwoFiftyFiveInsertedUserResult">
+                            <!-- gap for result of meterage -->
+
+                        </p>
+                    </li>
+                    <li>
+                        <label for="input1">Open Cut</label>
+                        <input type="text" id="threeOneFiveToTwoFiftyFiveOpenCutUserInput" id="input1"
+                            placeholder="315mm to 255mm">
+                        <button
+                            onclick="calculateValue('threeOneFiveToTwoFiftyFiveOpenCutUserInput', 2.29,'threeOneFiveToTwoFiftyFiveOpenCutUserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="threeOneFiveToTwoFiftyFiveOpenCutUserResult">
+                            <!-- gap for result of meterage -->
+
+                        </p>
+                    </li>
+                    <li>
+                        <label for="input1">Pre - EX</label>
+                        <input type="text" id="threeOneFiveToTwoFiftyFivePre-ExUserInput" id="input1"
+                            placeholder="315mm to 255mm">
+                        <button
+                            onclick="calculateValue('threeOneFiveToTwoFiftyFivePre-ExUserInput', 1.88,'threeOneFiveToTwoFiftyFivePre-ExUserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="threeOneFiveToTwoFiftyFivePre-ExUserResult">
+                            <!-- gap for result of meterage -->
+
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="submenu" id="submenu6">
+                <ul class="dropdown-content">
+                    <!-- Button 6 -->
+                    <li>
+                        <label for="input1">Inserted</label>
+                        <input type="text" id="fiveHundredInsertedUserInput" id="input1" placeholder="500mm">
+                        <button
+                            onclick="calculateValue('fiveHundredInsertedUserInput', 2.29,'fiveHundredInsertedUserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="fiveHundredInsertedUserResult">
+                            <!-- gap for result of meterage -->
+
+                        </p>
+                    </li>
+                    <li>
+                        <label for="input1">Open Cut</label>
+                        <input type="text" id="fiveHundredOpenCutUserInput" id="input1" placeholder="500mm">
+                        <button
+                            onclick="calculateValue('fiveHundredOpenCutUserInput', 2.17,'fiveHundredOpenCutUserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="fiveHundredOpenCutUserResult">
+                            <!-- gap for result of meterage -->
+
+                        </p>
+                    </li>
+                    <li>
+                        <label for="input1">Pre - EX</label>
+                        <input type="text" id="fiveHundredPre-ExUserInput" id="input1" placeholder="500mm">
+                        <button
+                            onclick="calculateValue('fiveHundredPre-ExUserInput', 1.88,'fiveHundredPre-ExUserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="fiveHundredPre-ExUserResult">
+                            <!-- gap for result of meterage -->
+
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="submenu" id="submenu7">
+                <ul class="dropdown-content">
+                    <!-- Button 7 -->
+                    <li>
+                        <label for="input1">Inserted</label>
+                        <input type="text" id="sixHundredAndThirtyInsertedUserInput" id="input1" placeholder="630mm">
+                        <button
+                            onclick="calculateValue('sixHundredAndThirtyInsertedUserInput', 2.71,'sixHundredAndThirtyInsertedUserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="sixHundredAndThirtyInsertedUserResult">
+                            <!-- gap for result of meterage -->
+
+                        </p>
+                    </li>
+                    <li>
+                        <label for="input1">Open Cut</label>
+                        <input type="text" id="sixHundredAndThirtyOpenCutUserInput" id="input1" placeholder="630mm">
+                        <button
+                            onclick="calculateValue('sixHundredAndThirtyOpenCutUserInput', 3.13,'sixHundredAndThirtyOpenCutUserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="sixHundredAndThirtyOpenCutUserResult">
+                            <!-- gap for result of meterage -->
+
+                        </p>
+                    </li>
+                    <li>
+                        <label for="input1">Pre - EX</label>
+                        <input type="text" id="sixHundredAndThirtyPre-ExUserInput" id="input1" placeholder="630mm">
+                        <button
+                            onclick="calculateValue('sixHundredAndThirtyPre-ExUserInput', 1.88,'sixHundredAndThirtyPre-ExUserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="sixHundredAndThirtyPre-ExUserResult">
+                            <!-- gap for result of meterage -->
+
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="submenu" id="submenu8">
+                <ul class="dropdown-content">
+                    <!-- Button 8 -->
+                    <li>
+                        <label for="input1">Inserted</label>
+                        <input type="text" id="moreThan630InsertedUserInput" id="input1" placeholder="More than 630mm">
+                        <button
+                            onclick="calculateValue('moreThan630InsertedUserInput', 3.13,'moreThan630InsertedUserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="moreThan630InsertedUserResult">
+                            <!-- gap for result of meterage -->
+
+                        </p>
+                    </li>
+                    <li>
+                        <label for="input1">Open Cut</label>
+                        <input type="text" id="moreThan630OpenCutUserInput" id="input1" placeholder="More than 630mm">
+                        <button
+                            onclick="calculateValue('moreThan630OpenCutUserInput', 3.54,'moreThan630OpenCutUserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="moreThan630OpenCutUserResult">
+                            <!-- gap for result of meterage -->
+
+                        </p>
+                    </li>
+                    <li>
+                        <label for="input1">Pre - EX</label>
+                        <input type="text" id="moreThan630OpenPre-ExUserInput" id="input1"
+                            placeholder="More than 630mm">
+                        <button
+                            onclick="calculateValue('moreThan630OpenPre-ExUserInput', 1.88,'moreThan630OpenPre-ExUserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="moreThan630OpenPre-ExUserResult">
+                            <!-- gap for result of meterage -->
+
+                        </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="submenu" id="submenu9">
+                <ul class="dropdown-content">
+                    <!-- Button 9 -->
+                    <li>
+                        <label for="input1">How many Ponds have you Abandoned (40 hour week)</label>
+                        <input type="text" id="abandonedUserInput" id="input1" placeholder="Per PON">
+                        <button
+                            onclick="calculateValue('abandonedUserInput', 19.50,'abandonedUserResult')">Submit</button>
+                        <button>Clear</button>
+                        <p id="abandonedUserResult">
+                            <!-- gap for result of meterage -->
+
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        <!--always keep this code below at the bottom of everything everything -->
+
+        <div class="totalbox">
+            <ul>
+                <li>
+                    <label for="input1"></label>
+                    <input type="text" id="totalbox" id="input1" placeholder="Total" disabled="disabled" />
+                </li>
+            </ul>
+        </div>
+        <!--always keep this code above at the bottom of everything everything-->
     </nav>
+    <div>
+        <h3>How To Use</h3>
+        <p>
+            <li>Please select each tab and fill in the releavent information.</li>
+            <li>There is a "total" box that will add up every field you have entered under the boxes</li>
+            <li>To restart please refresh the page</li>
+
+
+        </p>
+
+    </div>
+    <div id="warning">
+        <h4>This is a Unoffical Caculator for Wales & West Utilities please use this as a guid as this is still under
+            BETA test</h4>
+    </div>
+
 
 
 
