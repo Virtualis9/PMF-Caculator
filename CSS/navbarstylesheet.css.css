@@ -20,6 +20,22 @@ p {
 
 li {
     text-align: center;
+
+}
+
+p {
+    text-align: center;
+
+}
+
+.navbar {
+    text-align: center;
+    align-items: center;
+
+}
+
+.warning {
+    text-align: center;
 }
 
 .submenu {
@@ -81,12 +97,15 @@ li {
     margin: 10px 0;
     width: 250px;
     padding: 10px;
+    Justify-content: Center;
+    text-align: center;
 
 }
 
 .dropdown-content li {
     list-style: none;
     text-align: center;
+
 
 
 
@@ -102,6 +121,7 @@ li {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
     text-align: center;
+    Justify-content: Center;
 
 
 
@@ -124,6 +144,7 @@ li {
     border-radius: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    text-align: center;
 }
 
 .sub-btn:hover {
@@ -179,19 +200,29 @@ li {
     transition: background-color 0.3s, box-shadow 0.3s;
     position: relative;
 
+
+
 }
 
 #totalbox {
     display: inline-block;
     vertical-align: middle;
-    margin: 5px 0;
+    margin: 0px, 0px;
     padding: 10px 12px;
     cursor: pointer;
     transition: background-color 0.3s, box-shadow 0.3s;
     position: relative;
     border: 2px solid #555;
     border-radius: 10px;
+    text-align: center;
 
+}
+
+.totalbox {
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    margin-right: 40px;
 }
 
 li {
