@@ -1,37 +1,17 @@
-h1 {
-    text-align: center;
-}
-
-h3 {
-    text-align: center;
-}
-
-h4 {
-    text-align: center;
-}
-
 .howtouse {
     text-align: center;
 }
 
+h1,
+h3,
+h4,
 p {
     text-align: center;
-}
-
-li {
-    text-align: center;
-
-}
-
-p {
-    text-align: center;
-
 }
 
 .navbar {
     text-align: center;
     align-items: center;
-
 }
 
 .warning {
@@ -41,9 +21,53 @@ p {
 .submenu {
     display: none;
     /* Hide all submenus by default */
-
 }
 
+.dropdown-content li {
+    list-style: none;
+    text-align: center;
+    margin-right: 40px;
+}
+
+.dropdown-btn {
+    background-color: #555;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    text-align: center;
+    Justify-content: space-around;
+    width: 8.4%;
+}
+
+.dropdown-btn:hover {
+    background-color: #777;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.sub-btn {
+    background-color: #555;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    text-align: center;
+}
+
+.sub-btn:hover {
+    background-color: #777;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+/* Style for each submenu content box */
 #submenu1,
 #submenu2,
 #submenu3,
@@ -94,81 +118,10 @@ p {
 #submenu48 {
     border: 2px solid #555;
     border-radius: 10px;
-    margin: 10px 0;
-    width: 250px;
-    padding: 10px;
-    Justify-content: Center;
+    width: 265px;
+    margin: auto;
     text-align: center;
-
-}
-
-.dropdown-content li {
-    list-style: none;
-    text-align: center;
-
-
-
-
-}
-
-.dropdown-btn {
-    background-color: #555;
-    color: white;
-    padding: 15px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
-    text-align: center;
-    Justify-content: Center;
-
-
-
-
-}
-
-.dropdown-btn:hover {
-    background-color: #777;
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-    transform: scale(1.05);
-
-}
-
-.sub-btn {
-    background-color: #555;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-    border-radius: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
-    text-align: center;
-}
-
-.sub-btn:hover {
-    background-color: #777;
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-    transform: scale(1.05);
-}
-
-/* Style for each submenu content box */
-#submenu1,
-#submenu2,
-#submenu3,
-#submenu4,
-#submenu5,
-#submenu6,
-#submenu7,
-#submenu8,
-#submenu9 {
-    border: 2px solid #555;
-    border-radius: 10px;
-    margin: 10px 0;
-    width: 250px;
-    padding: 10px;
-
+    font-weight: bold;
 }
 
 /* Style for submit and clear buttons within each submenu */
@@ -179,29 +132,29 @@ p {
     border: none;
     cursor: pointer;
     border-radius: 8px;
-    margin-right: 5px;
     transition: background-color 0.3s, box-shadow 0.3s;
+    text-align: center;
+    margin-left: 5px;
+}
 
+button {
+    text-align: center;
 }
 
 .submenu button:hover {
     background-color: #777;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
 }
 
 /* Style for input feilds */
 .submenu input {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 5px 0;
-    padding: 10px 12px;
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
     cursor: pointer;
     transition: background-color 0.3s, box-shadow 0.3s;
     position: relative;
-
-
-
+    text-align: center;
 }
 
 #totalbox {
@@ -215,7 +168,6 @@ p {
     border: 2px solid #555;
     border-radius: 10px;
     text-align: center;
-
 }
 
 .totalbox {
@@ -227,6 +179,11 @@ p {
 
 li {
     list-style: none;
+    text-align: center;
+}
 
-
+@media only screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
 }
